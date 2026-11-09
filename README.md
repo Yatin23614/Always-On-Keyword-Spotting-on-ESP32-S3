@@ -1,6 +1,6 @@
-# Always-On Keyword Spotting on ESP32-S3
+# Always-On Keyword Spotting on ESP32 DevKit V1
 
-This project trains a small quantized CNN and runs it continuously on an ESP32-S3 with an I2S microphone.
+This project trains a small quantized CNN and runs it continuously on an ESP32 DevKit V1 with an analog microphone.
 
 The default model recognizes:
 
@@ -15,8 +15,8 @@ Install:
 - Python 3.10 or newer
 - Git
 - An ESP-IDF installation with the `idf.py` command available
-- An ESP32-S3 board
-- A 16-bit I2S digital microphone
+- An ESP32 DevKit V1 board
+- A 3-pin analog microphone module with `GND`, `VCC`, and `OUT`
 
 For model training, install the optional TensorFlow dependency. For running the host tests, TensorFlow is not required.
 
@@ -75,6 +75,36 @@ Every file must be:
 
 Use multiple speakers, recording distances, microphones, and background-noise conditions. Put silence, unrelated speech, and noise in `unknown`. Keep speakers separated between training and evaluation recordings when measuring real accuracy.
 
+### Seed the unknown class
+
+Download and prepare public Speech Commands v0.02 recordings as unknown/background examples:
+
+```powershell
+python scripts/download_speech_commands.py --output-dir data/raw --limit 5000
+```
+
+The dataset contains common isolated words, not the custom project commands. Record several dozen or more examples of every custom label and place them in the matching folders before training.
+
+For a quick smoke test without recording your own voice, Windows can generate synthetic 16 kHz WAV files:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/generate_tts_dataset.ps1 `
+  -OutputDir data/raw `
+  -CopiesPerLabel 25
+```
+
+These files use one computer-generated voice and are suitable for testing the pipeline only. Add real recordings for reliable recognition.
+
+### Record your own voice
+
+To achieve accurate real-world recognition, record samples using your computer microphone:
+
+```powershell
+python scripts/record_my_voice.py --count 15
+```
+
+The script guides you with an interactive countdown to record 15 repetitions of each keyword.
+
 ## 5. Train and export the model
 
 From the repository root:
@@ -110,23 +140,31 @@ Do this again after every model retraining. Do not edit the generated `model_dat
 
 ## 7. Configure the microphone
 
-Edit [firmware/main/config.h](firmware/main/config.h) and set the pins for your board:
+The current firmware is configured for an analog microphone on GPIO34:
 
 ```cpp
-#define KWS_I2S_BCLK GPIO_NUM_4
-#define KWS_I2S_WS   GPIO_NUM_5
-#define KWS_I2S_DATA GPIO_NUM_6
+#define KWS_MIC_ADC_GPIO GPIO_NUM_34
 ```
 
-The current configuration assumes an I2S microphone providing 16-bit mono samples. Check your microphone breakout’s wiring and whether its left/right-select pin must be tied low or high.
+Wire the microphone as follows:
 
-## 8. Build and flash the ESP32-S3
+```text
+Mic GND -> ESP32 GND
+Mic VCC -> ESP32 3V3
+Mic OUT -> ESP32 GPIO34 / D34
+```
+
+The microphone output must remain between 0 V and 3.3 V. GPIO34 is input-only, which is suitable for an analog microphone output. ADC1 is used so Wi-Fi can run at the same time.
+
+The firmware connects to the configured home/office Wi-Fi network and hosts a live dashboard. After flashing, read the DHCP address printed by the serial monitor, then open that address from a phone or computer on the same network. The page polls the ESP32 and displays the latest recognized command and confidence.
+
+## 8. Build and flash the ESP32 DevKit V1
 
 Open an ESP-IDF PowerShell or command prompt, then run:
 
 ```powershell
 cd firmware
-idf.py set-target esp32s3
+idf.py set-target esp32
 idf.py build
 idf.py -p COM5 flash monitor
 ```
@@ -182,11 +220,11 @@ Confirm that:
 1. `scripts/embed_model.py` was run after the latest training run.
 2. The TensorFlow Lite Micro ESP-IDF component is installed.
 3. The model is fully int8 quantized.
-4. The ESP32-S3 has enough tensor-arena memory.
+4. The ESP32 has enough tensor-arena memory.
 
 ### No audio or unstable detections
 
-Check BCLK, WS, DATA, ground, microphone power, and the microphone’s I2S channel-selection pin. Verify that the GPIO definitions match the physical wiring.
+Check OUT, ground, microphone power, and the GPIO34 wiring. Verify that the microphone output never exceeds 3.3 V.
 
 ## Runtime contract
 

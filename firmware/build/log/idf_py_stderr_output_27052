@@ -1,0 +1,555 @@
+Command: C:\Espressif\tools\python\v6.1\venv\Scripts\python.exe C:\esp\v6.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\yatin\OneDrive\Documents\always on device\firmware\build\keyword_spotter.elf C:\Users\yatin\OneDrive\Documents\always on device\firmware\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\tools\python\v6.1\venv\Scripts\python.exe' 'C:\esp\v6.1\esp-idf\tools\idf.py' '-p' 'COM3'
+--- WARNING: GDB cannot open serial ports accessed as COMx
+--- NOTE: Using \\.\COM3 instead...
+--- esp-idf-monitor 1.10.0 on \\.\COM3 115200
+--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+[1;33m--- WARNING:[0m Failed to decode multiple lines in a row. Try checking the baud rate and XTAL frequency setting in menuconfig
+[1;33m--- WARNING:[0m Failed to decode multiple lines in a row. Try checking the baud rate and XTAL frequency setting in menuconfig
+[1;33m--- WARNING:[0m Failed to decode multiple lines in a row. Try checking the baud rate and XTAL frequency setting in menuconfig
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x400e5931: tflite::micro::MicroAllocator::AllocateTempTfLiteTensor(tflite::Model const*, tflite::micro::SubgraphAllocations const*, int, int) at C:/Users/yatin/OneDrive/Documents/always on device/firmware/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_allocator.cc:871
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x400e0bff: tflite::micro::(anonymous namespace)::Prepare(tflite::micro::TfLiteContext*, tflite::micro::TfLiteNode*) at C:/Users/yatin/OneDrive/Documents/always on device/firmware/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/depthwise_conv.cc:253
+--- 0x4008331e: _xt_lowint1 at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:1257
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x400e0bff: tflite::micro::(anonymous namespace)::Prepare(tflite::micro::TfLiteContext*, tflite::micro::TfLiteNode*) at C:/Users/yatin/OneDrive/Documents/always on device/firmware/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/depthwise_conv.cc:253
+--- 0x4008331e: _xt_lowint1 at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:1257
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+[1;33m--- WARNING:[0m Failed to decode multiple lines in a row. Try checking the baud rate and XTAL frequency setting in menuconfig
+[1;33m--- WARNING:[0m Failed to decode multiple lines in a row. Try checking the baud rate and XTAL frequency setting in menuconfig
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x400e0bff: tflite::micro::(anonymous namespace)::Prepare(tflite::micro::TfLiteContext*, tflite::micro::TfLiteNode*) at C:/Users/yatin/OneDrive/Documents/always on device/firmware/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/depthwise_conv.cc:253
+--- 0x4008331e: _xt_lowint1 at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:1257
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x400e0bff: tflite::micro::(anonymous namespace)::Prepare(tflite::micro::TfLiteContext*, tflite::micro::TfLiteNode*) at C:/Users/yatin/OneDrive/Documents/always on device/firmware/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/depthwise_conv.cc:253
+--- 0x4008331e: _xt_lowint1 at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:1257
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x400de517: tflite::micro::(anonymous namespace)::Prepare(tflite::micro::TfLiteContext*, tflite::micro::TfLiteNode*) at C:/Users/yatin/OneDrive/Documents/always on device/firmware/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc:120
+--- 0x4008331e: _xt_lowint1 at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:1257
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x400e0bff: tflite::micro::(anonymous namespace)::Prepare(tflite::micro::TfLiteContext*, tflite::micro::TfLiteNode*) at C:/Users/yatin/OneDrive/Documents/always on device/firmware/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/depthwise_conv.cc:253
+--- 0x4008331e: _xt_lowint1 at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:1257
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x400e0bff: tflite::micro::(anonymous namespace)::Prepare(tflite::micro::TfLiteContext*, tflite::micro::TfLiteNode*) at C:/Users/yatin/OneDrive/Documents/always on device/firmware/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/depthwise_conv.cc:253
+--- 0x4008331e: _xt_lowint1 at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:1257
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x400e0bff: tflite::micro::(anonymous namespace)::Prepare(tflite::micro::TfLiteContext*, tflite::micro::TfLiteNode*) at C:/Users/yatin/OneDrive/Documents/always on device/firmware/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/depthwise_conv.cc:253
+--- 0x4008331e: _xt_lowint1 at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:1257
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x4008331e: _xt_lowint1 at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:1257
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x400e0bff: tflite::micro::(anonymous namespace)::Prepare(tflite::micro::TfLiteContext*, tflite::micro::TfLiteNode*) at C:/Users/yatin/OneDrive/Documents/always on device/firmware/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/depthwise_conv.cc:253
+--- 0x4008331e: _xt_lowint1 at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:1257
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+[1;33m--- WARNING:[0m Failed to decode multiple lines in a row. Try checking the baud rate and XTAL frequency setting in menuconfig
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x400e0bff: tflite::micro::(anonymous namespace)::Prepare(tflite::micro::TfLiteContext*, tflite::micro::TfLiteNode*) at C:/Users/yatin/OneDrive/Documents/always on device/firmware/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/depthwise_conv.cc:253
+--- 0x4008331e: _xt_lowint1 at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:1257
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x400e5931: tflite::micro::MicroAllocator::AllocateTempTfLiteTensor(tflite::Model const*, tflite::micro::SubgraphAllocations const*, int, int) at C:/Users/yatin/OneDrive/Documents/always on device/firmware/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_allocator.cc:871
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x400e0bff: tflite::micro::(anonymous namespace)::Prepare(tflite::micro::TfLiteContext*, tflite::micro::TfLiteNode*) at C:/Users/yatin/OneDrive/Documents/always on device/firmware/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/depthwise_conv.cc:253
+--- 0x4008331e: _xt_lowint1 at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:1257
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x400e0bff: tflite::micro::(anonymous namespace)::Prepare(tflite::micro::TfLiteContext*, tflite::micro::TfLiteNode*) at C:/Users/yatin/OneDrive/Documents/always on device/firmware/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/depthwise_conv.cc:253
+--- 0x4008331e: _xt_lowint1 at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:1257
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x400e5931: tflite::micro::MicroAllocator::AllocateTempTfLiteTensor(tflite::Model const*, tflite::micro::SubgraphAllocations const*, int, int) at C:/Users/yatin/OneDrive/Documents/always on device/firmware/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_allocator.cc:871
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x400e0bff: tflite::micro::(anonymous namespace)::Prepare(tflite::micro::TfLiteContext*, tflite::micro::TfLiteNode*) at C:/Users/yatin/OneDrive/Documents/always on device/firmware/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/depthwise_conv.cc:253
+--- 0x4008331e: _xt_lowint1 at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:1257
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x400e0bff: tflite::micro::(anonymous namespace)::Prepare(tflite::micro::TfLiteContext*, tflite::micro::TfLiteNode*) at C:/Users/yatin/OneDrive/Documents/always on device/firmware/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/depthwise_conv.cc:253
+--- 0x4008331e: _xt_lowint1 at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:1257
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x400de517: tflite::micro::(anonymous namespace)::Prepare(tflite::micro::TfLiteContext*, tflite::micro::TfLiteNode*) at C:/Users/yatin/OneDrive/Documents/always on device/firmware/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc:120
+--- 0x4008331e: _xt_lowint1 at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:1257
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x400e0bff: tflite::micro::(anonymous namespace)::Prepare(tflite::micro::TfLiteContext*, tflite::micro::TfLiteNode*) at C:/Users/yatin/OneDrive/Documents/always on device/firmware/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/depthwise_conv.cc:253
+--- 0x4008331e: _xt_lowint1 at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:1257
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x400de517: tflite::micro::(anonymous namespace)::Prepare(tflite::micro::TfLiteContext*, tflite::micro::TfLiteNode*) at C:/Users/yatin/OneDrive/Documents/always on device/firmware/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc:120
+--- 0x4008331e: _xt_lowint1 at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:1257
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x400e0bff: tflite::micro::(anonymous namespace)::Prepare(tflite::micro::TfLiteContext*, tflite::micro::TfLiteNode*) at C:/Users/yatin/OneDrive/Documents/always on device/firmware/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/depthwise_conv.cc:253
+--- 0x4008331e: _xt_lowint1 at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:1257
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x400de517: tflite::micro::(anonymous namespace)::Prepare(tflite::micro::TfLiteContext*, tflite::micro::TfLiteNode*) at C:/Users/yatin/OneDrive/Documents/always on device/firmware/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc:120
+--- 0x4008331e: _xt_lowint1 at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:1257
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x400e0bff: tflite::micro::(anonymous namespace)::Prepare(tflite::micro::TfLiteContext*, tflite::micro::TfLiteNode*) at C:/Users/yatin/OneDrive/Documents/always on device/firmware/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/depthwise_conv.cc:253
+--- 0x4008331e: _xt_lowint1 at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:1257
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x400de517: tflite::micro::(anonymous namespace)::Prepare(tflite::micro::TfLiteContext*, tflite::micro::TfLiteNode*) at C:/Users/yatin/OneDrive/Documents/always on device/firmware/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc:120
+--- 0x4008331e: _xt_lowint1 at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:1257
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+[1;33m--- WARNING:[0m Failed to decode multiple lines in a row. Try checking the baud rate and XTAL frequency setting in menuconfig
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x400e0bff: tflite::micro::(anonymous namespace)::Prepare(tflite::micro::TfLiteContext*, tflite::micro::TfLiteNode*) at C:/Users/yatin/OneDrive/Documents/always on device/firmware/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/depthwise_conv.cc:253
+--- 0x4008331e: _xt_lowint1 at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:1257
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x400e5931: tflite::micro::MicroAllocator::AllocateTempTfLiteTensor(tflite::Model const*, tflite::micro::SubgraphAllocations const*, int, int) at C:/Users/yatin/OneDrive/Documents/always on device/firmware/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_allocator.cc:871
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x400e0bff: tflite::micro::(anonymous namespace)::Prepare(tflite::micro::TfLiteContext*, tflite::micro::TfLiteNode*) at C:/Users/yatin/OneDrive/Documents/always on device/firmware/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/depthwise_conv.cc:253
+--- 0x4008331e: _xt_lowint1 at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:1257
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x400de517: tflite::micro::(anonymous namespace)::Prepare(tflite::micro::TfLiteContext*, tflite::micro::TfLiteNode*) at C:/Users/yatin/OneDrive/Documents/always on device/firmware/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc:120
+--- 0x4008331e: _xt_lowint1 at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:1257
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- esp_idf_monitor (1.10.0) - ESP-IDF Monitor tool
+--- based on miniterm from pySerial
+--- 
+--- Ctrl+]   Exit program
+--- Ctrl+T   Menu escape key, followed by:
+--- Menu keys:
+---    Ctrl+T         Send the menu character itself to remote
+---    Ctrl+]         Send the exit character itself to remote
+---    Ctrl+R         Reset target board via RTS line
+---    Ctrl+F         Build & flash project (fast reflash, ESP-IDF 6.1+)
+---    Ctrl+A (or A)  Build & flash app only
+---    Ctrl+E (or E)  Build & full flash project
+---    Ctrl+Y         Toggle output display
+---    Ctrl+L         Toggle saving output into file
+---    Ctrl+I (or I)  Toggle printing timestamps
+---    Ctrl+P         Reset target into bootloader via the DTR/RTS lines
+---    Ctrl+X (or X)  Exit program
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x400e5931: tflite::micro::MicroAllocator::AllocateTempTfLiteTensor(tflite::Model const*, tflite::micro::SubgraphAllocations const*, int, int) at C:/Users/yatin/OneDrive/Documents/always on device/firmware/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/micro_allocator.cc:871
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x400e0bff: tflite::micro::(anonymous namespace)::Prepare(tflite::micro::TfLiteContext*, tflite::micro::TfLiteNode*) at C:/Users/yatin/OneDrive/Documents/always on device/firmware/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/depthwise_conv.cc:253
+--- 0x4008331e: _xt_lowint1 at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:1257
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- esp_idf_monitor (1.10.0) - ESP-IDF Monitor tool
+--- based on miniterm from pySerial
+--- 
+--- Ctrl+]   Exit program
+--- Ctrl+T   Menu escape key, followed by:
+--- Menu keys:
+---    Ctrl+T         Send the menu character itself to remote
+---    Ctrl+]         Send the exit character itself to remote
+---    Ctrl+R         Reset target board via RTS line
+---    Ctrl+F         Build & flash project (fast reflash, ESP-IDF 6.1+)
+---    Ctrl+A (or A)  Build & flash app only
+---    Ctrl+E (or E)  Build & full flash project
+---    Ctrl+Y         Toggle output display
+---    Ctrl+L         Toggle saving output into file
+---    Ctrl+I (or I)  Toggle printing timestamps
+---    Ctrl+P         Reset target into bootloader via the DTR/RTS lines
+---    Ctrl+X (or X)  Exit program
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x400de517: tflite::micro::(anonymous namespace)::Prepare(tflite::micro::TfLiteContext*, tflite::micro::TfLiteNode*) at C:/Users/yatin/OneDrive/Documents/always on device/firmware/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/conv.cc:120
+--- 0x4008331e: _xt_lowint1 at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:1257
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x400e0bff: tflite::micro::(anonymous namespace)::Prepare(tflite::micro::TfLiteContext*, tflite::micro::TfLiteNode*) at C:/Users/yatin/OneDrive/Documents/always on device/firmware/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/depthwise_conv.cc:253
+--- 0x4008331e: _xt_lowint1 at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:1257
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x400e0bff: tflite::micro::(anonymous namespace)::Prepare(tflite::micro::TfLiteContext*, tflite::micro::TfLiteNode*) at C:/Users/yatin/OneDrive/Documents/always on device/firmware/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/depthwise_conv.cc:253
+--- 0x4008331e: _xt_lowint1 at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:1257
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+[1;33m--- WARNING:[0m Failed to decode multiple lines in a row. Try checking the baud rate and XTAL frequency setting in menuconfig
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x40080400: _invalid_pc_placeholder at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:2259
+--- 0x40080644: call_start_cpu0 at C:/esp/v6.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3698
+--- 0x4008a530: _frxt_dispatch at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+--- 0x4008a4e2: _frxt_int_exit at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+--- 0x400e0bff: tflite::micro::(anonymous namespace)::Prepare(tflite::micro::TfLiteContext*, tflite::micro::TfLiteNode*) at C:/Users/yatin/OneDrive/Documents/always on device/firmware/managed_components/espressif__esp-tflite-micro/tensorflow/lite/micro/kernels/esp_nn/depthwise_conv.cc:253
+--- 0x4008331e: _xt_lowint1 at C:/esp/v6.1/esp-idf/components/xtensa/xtensa_vectors.S:1257
+--- NOTE: To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.
+--- NOTE: To exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.
+--- 0x40089e7d: panic_abort at C:/esp/v6.1/esp-idf/components/esp_system/panic.c:500
+--- 0x40089e49: esp_system_abort at C:/esp/v6.1/esp-idf/components/esp_system/port/esp_system_chip.c:87
+--- 0x4016fe6a: vApplicationStackOverflowHook at C:/esp/v6.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:577
+--- 0x4008acfa: vTaskSwitchContext at C:/esp

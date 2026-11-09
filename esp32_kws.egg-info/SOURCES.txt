@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+esp32_kws.egg-info/PKG-INFO
+esp32_kws.egg-info/SOURCES.txt
+esp32_kws.egg-info/dependency_links.txt
+esp32_kws.egg-info/requires.txt
+esp32_kws.egg-info/top_level.txt
+kws/__init__.py
+kws/features.py
+kws/labels.py
+kws/policy.py
+kws/quantization.py
+tests/test_features.py
+tests/test_policy.py

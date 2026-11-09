@@ -1,0 +1,9 @@
+start
+stop
+next
+previous
+volume_up
+volume_down
+lights_on
+lights_off
+unknown

@@ -1,0 +1,504 @@
+Command: C:\Espressif\tools\python\v6.1\venv\Scripts\python.exe C:\esp\v6.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\yatin\OneDrive\Documents\always on device\firmware\build\keyword_spotter.elf C:\Users\yatin\OneDrive\Documents\always on device\firmware\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\tools\python\v6.1\venv\Scripts\python.exe' 'C:\esp\v6.1\esp-idf\tools\idf.py'
+t u8 &�$��jrt:�P9*9I�U,oC:�1l i%�eM}1M	)4
+0��e��ͳZ ,L%:��H�E�:�0�ɖ�00	�ɖ:�0`c0v:�0	�E�K�0wdr�
+m��)'T�	��div2
+lad0fff0bb��6272
+la:x4�	�b:G�%�S�+04����bK���jety0xh44��I (26) boot: ESP-IDF v6.1 2nd stage bootloader
+[0;32mI (26) boot: compile time Nov  9 2026 17:23:33[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (28) boot: chip revision: v1.1[0m
+[0;32mI (30) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (34) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (38) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (41) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (48) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (55) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (61) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (68) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (74) boot: End of partition table[0m
+[0;32mI (77) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=24c24h (150564) map[0m
+[0;32mI (139) esp_image: segment 1: paddr=00034c4c vaddr=3ffb0000 size=04534h ( 17716) load[0m
+[0;32mI (146) esp_image: segment 2: paddr=00039188 vaddr=40080000 size=06e90h ( 28304) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a4ac8h (674504) map[0m
+[0;32mI (398) esp_image: segment 4: paddr=000e4af0 vaddr=40086e90 size=0e754h ( 59220) load[0m
+[0;32mI (423) esp_image: segment 5: paddr=000f324c vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (434) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (434) boot: Disabling RNG early entropy source...[0m
+[0;32mI (445) cpu_start: Multicore app[0m
+[0;32mI (453) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (453) cpu_start: Pro cpu start user code[0m
+[0;32mI (453) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (455) app_init: Application information:[0m
+[0;32mI (459) app_init: Project name:     keyword_spotter[0m
+[0;32mI (463) app_init: App version:      74082f4-dirty[0m
+[0;32mI (468) app_init: Compile time:     Nov  9 2026 17:21:51[0m
+[0;32mI (473) app_init: ELF file SHA256:  86eccaaba...[0m
+[0;32mI (477) app_init: ESP-IDF:          v6.1[0m
+[0;32mI (481) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (485) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (489) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (493) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (499) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (504) heap_init: At 3FFD1B98 len 0000E468 (57 KiB): DRAM[0m
+[0;32mI (509) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (514) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (520) heap_init: At 400955E4 len 0000AA1C (42 KiB): IRAM[0m
+[0;32mI (527) spi_flash: detected chip: generic[0m
+[0;32mI (529) spi_flash: flash io: dio[0m
+[0;32mI (534) main_task: Started on CPU0[0m
+[0;32mI (536) main_task: Calling app_main()[0m
+[0;32mI (577) wifi:wifi driver task: 3ffd960c, prio:23, stack:6656, core=0[0m
+[0;32mI (596) wifi:wifi firmware version: e12a754[0m
+[0;32mI (596) wifi:wifi certification version: v7.0[0m
+[0;32mI (596) wifi:config NVS flash: enabled[0m
+[0;32mI (596) wifi:config nano formatting: disabled[0m
+[0;32mI (601) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (605) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (609) wifi:Init management short buffer num: 32[0m
+[0;32mI (614) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (618) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (622) wifi:Init static rx buffer num: 10[0m
+[0;32mI (626) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (631) wifi_init: rx ba win: 6[0m
+[0;32mI (632) wifi_init: accept mbox: 6[0m
+[0;32mI (635) wifi_init: tcpip mbox: 32[0m
+[0;32mI (638) wifi_init: udp mbox: 6[0m
+[0;32mI (641) wifi_init: tcp mbox: 6[0m
+[0;32mI (644) wifi_init: tcp tx win: 5760[0m
+[0;32mI (647) wifi_init: tcp rx win: 5760[0m
+[0;32mI (650) wifi_init: tcp mss: 1440[0m
+[0;32mI (653) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (657) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (662) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (670) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (759) wifi:mode : sta (fc:e8:c0:e1:b7:1c)[0m
+[0;32mI (759) wifi:enable tsf[0m
+[0;32mI (771) kws_web: Connecting to Wi-Fi 'Jai Shri Krishna'; the dashboard URL will be printed after DHCP[0m
+[0;32mI (781) main_task: Returned from app_main()[0m
+[0;32mI (846) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (854) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (861) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (977) wifi:connected with Jai Shri Krishna, aid = 1, channel 1, BW20, bssid = 8c:a3:99:0f:a7:b9[0m
+[0;32mI (977) wifi:security: WPA2-PSK, phy: bgn, rssi: -75, cipher(pairwise:0x3, group:0x1), pmf:0[0m
+[0;32mI (987) wifi:pm start, type: 1[0m
+
+[0;32mI (987) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1046) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1055) wifi:<ba-add>idx:0 (ifx:0, 8c:a3:99:0f:a7:b9), tid:0, ssn:2, winSize:64[0m
+[0;32mI (2159) esp_netif_handlers: sta ip: 192.168.1.2, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2160) kws_web: Dashboard available at http://192.168.1.2[0m
+[0;32mI (2365) kws_diag: Mic Peak: 14400 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (3563) kws_diag: Mic Peak: 16032 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (4760) kws_diag: Mic Peak: 32752 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (5959) kws_diag: Mic Peak: 32752 | Top Pred: 'volume_down' (36.3%) | Gate: HELD[0m
+[0;32mI (7164) kws_diag: Mic Peak: 32752 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (8359) kws_diag: Mic Peak: 32752 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (9561) kws_diag: Mic Peak: 32752 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (10756) kws_diag: Mic Peak: 32752 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (11955) kws_diag: Mic Peak: 32752 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (13152) kws_diag: Mic Peak: 32752 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (14343) kws_diag: Mic Peak: 32752 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (15544) kws_diag: Mic Peak: 32720 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (16742) kws_diag: Mic Peak: 32752 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (17939) kws_diag: Mic Peak: 32752 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (19138) kws_diag: Mic Peak: 32752 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (20332) kws_diag: Mic Peak: 32736 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (21525) kws_diag: Mic Peak: 32752 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (22722) kws_diag: Mic Peak: 32752 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (23918) kws_diag: Mic Peak: 32752 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (25114) kws_diag: Mic Peak: 32752 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (26313) kws_diag: Mic Peak: 32720 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (27508) kws_diag: Mic Peak: 22848 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (28704) kws_diag: Mic Peak: 21072 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (29900) kws_diag: Mic Peak: 21072 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (31092) kws_diag: Mic Peak:  1008 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (32287) kws_diag: Mic Peak:  1008 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (33484) kws_diag: Mic Peak:  1008 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (34679) kws_diag: Mic Peak:  1008 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (35874) kws_diag: Mic Peak:  1008 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (37073) kws_diag: Mic Peak:  1008 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (38269) kws_diag: Mic Peak: 27616 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (39465) kws_diag: Mic Peak: 27616 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (40663) kws_diag: Mic Peak:  4880 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (41857) kws_diag: Mic Peak:  3168 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (43051) kws_diag: Mic Peak: 28976 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (44250) kws_diag: Mic Peak: 28976 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (45443) kws_diag: Mic Peak: 28976 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (46638) kws_diag: Mic Peak:  4480 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (47832) kws_diag: Mic Peak: 28336 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (49028) kws_diag: Mic Peak: 28336 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+����������������������������������������������������������������(50219) kws_diag: Mic Peak: 30560 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD
+[0;32mI (51414) kws_diag: Mic Peak: 30560 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (52610) kws_diag: Mic Peak:  3616 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (53806) kws_diag: Mic Peak:  3616 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (54998) kws_diag: Mic Peak:  3600 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (56197) kws_diag: Mic Peak:  3600 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (57391) kws_diag: Mic Peak:  4656 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (58584) kws_diag: Mic Peak:  4656 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (59782) kws_diag: Mic Peak:  4656 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (60977) kws_diag: Mic Peak:  2976 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (62175) kws_diag: Mic Peak:  4736 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (63371) kws_diag: Mic Peak:  4736 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (64570) kws_diag: Mic Peak:  4400 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (65769) kws_diag: Mic Peak:  4400 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (66969) kws_diag: Mic Peak:  3472 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (68163) kws_diag: Mic Peak: 14272 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (69365) kws_diag: Mic Peak: 14272 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (70559) kws_diag: Mic Peak: 14272 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (71754) kws_diag: Mic Peak:  3888 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (72950) kws_diag: Mic Peak:  3616 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (74145) kws_diag: Mic Peak:  3024 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (75343) kws_diag: Mic Peak:  2992 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (76539) kws_diag: Mic Peak:  2992 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (77734) kws_diag: Mic Peak:  3008 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (78932) kws_diag: Mic Peak:  3008 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (80128) kws_diag: Mic Peak:  3008 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (81317) kws_diag: Mic Peak:  2816 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (82512) kws_diag: Mic Peak:  2816 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (83705) kws_diag: Mic Peak:  2752 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (84903) kws_diag: Mic Peak:  8272 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (86098) kws_diag: Mic Peak:  8272 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (87292) kws_diag: Mic Peak:  3008 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (88492) kws_diag: Mic Peak:  3088 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (89687) kws_diag: Mic Peak:  3344 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (90879) kws_diag: Mic Peak:  3648 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (92074) kws_diag: Mic Peak:  3648 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (93271) kws_diag: Mic Peak:  3648 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (94466) kws_diag: Mic Peak:  3040 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (95658) kws_diag: Mic Peak:  3040 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (96854) kws_diag: Mic Peak: 32416 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (98050) kws_diag: Mic Peak: 32416 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (99235) kws_diag: Mic Peak:  3120 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (100427) kws_diag: Mic Peak: 28096 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (101622) kws_diag: Mic Peak: 28096 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (102818) kws_diag: Mic Peak: 28096 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (104016) kws_diag: Mic Peak:  1008 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (105214) kws_diag: Mic Peak:  1008 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (106410) kws_diag: Mic Peak:  1008 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (107607) kws_diag: Mic Peak:  1008 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (108800) kws_diag: Mic Peak:  1008 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (109995) kws_diag: Mic Peak: 20080 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (111197) kws_diag: Mic Peak: 20080 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (112392) kws_diag: Mic Peak: 16960 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (113590) kws_diag: Mic Peak: 32752 | Top Pred: 'unknown    ' (83.6%) | Gate: HELD[0m
+[0;32mI (114785) kws_diag: Mic Peak: 32752 | Top Pred: 'start      ' (61.3%) | Gate: HELD[0m
+[0;32mI (115982) kws_diag: Mic Peak: 32752 | Top Pred: 'start      ' (61.3%) | Gate: HELD[0m
+[0;32mI (116575) kws_app: command=0 confidence=0.844[0m
+[0;32mI (117170) kws_diag: Mic Peak:  1008 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (118371) kws_diag: Mic Peak:  1008 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (119567) kws_diag: Mic Peak:  1008 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (120765) kws_diag: Mic Peak:  1008 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (121960) kws_diag: Mic Peak:  1008 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (123156) kws_diag: Mic Peak:  1008 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (124347) kws_diag: Mic Peak:  1008 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (125537) kws_diag: Mic Peak:  1008 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (126736) kws_diag: Mic Peak:  1008 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (127933) kws_diag: Mic Peak:  1008 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (129127) kws_diag: Mic Peak:  1008 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (130326) kws_diag: Mic Peak:  1008 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (131522) kws_diag: Mic Peak:  1008 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (132718) kws_diag: Mic Peak:  1008 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (133917) kws_diag: Mic Peak:  1008 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (135116) kws_diag: Mic Peak: 25584 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (136313) kws_diag: Mic Peak: 25584 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (137511) kws_diag: Mic Peak:  6864 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (138702) kws_diag: Mic Peak:  7072 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (139901) kws_diag: Mic Peak: 14464 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (141095) kws_diag: Mic Peak: 14464 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (142292) kws_diag: Mic Peak:  9520 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (143488) kws_diag: Mic Peak:  8144 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (144689) kws_diag: Mic Peak:  8144 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (145888) kws_diag: Mic Peak:  8816 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (147084) kws_diag: Mic Peak: 13728 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (148279) kws_diag: Mic Peak: 13728 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (149474) kws_diag: Mic Peak: 32656 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (150674) kws_diag: Mic Peak: 32752 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (151874) kws_diag: Mic Peak: 32752 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (153072) kws_diag: Mic Peak: 32752 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15824
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Nov  9 2026 17:23:33[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (28) boot: chip revision: v1.1[0m
+[0;32mI (31) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (34) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (38) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (55) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (68) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (78) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=24c24h (150564) map[0m
+[0;32mI (139) esp_image: segment 1: paddr=00034c4c vaddr=3ffb0000 size=04534h ( 17716) load[0m
+[0;32mI (146) esp_image: segment 2: paddr=00039188 vaddr=40080000 size=06e90h ( 28304) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a4ac8h (674504) map[0m
+[0;32mI (399) esp_image: segment 4: paddr=000e4af0 vaddr=40086e90 size=0e754h ( 59220) load[0m
+[0;32mI (423) esp_image: segment 5: paddr=000f324c vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (434) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (434) boot: Disabling RNG early entropy source...[0m
+[0;32mI (445) cpu_start: Multicore app[0m
+[0;32mI (453) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (454) cpu_start: Pro cpu start user code[0m
+[0;32mI (454) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (455) app_init: Application information:[0m
+[0;32mI (459) app_init: Project name:     keyword_spotter[0m
+[0;32mI (464) app_init: App version:      74082f4-dirty[0m
+[0;32mI (468) app_init: Compile time:     Nov  9 2026 17:21:51[0m
+[0;32mI (473) app_init: ELF file SHA256:  86eccaaba...[0m
+[0;32mI (478) app_init: ESP-IDF:          v6.1[0m
+[0;32mI (481) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (485) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (489) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (493) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (499) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (504) heap_init: At 3FFD1B98 len 0000E468 (57 KiB): DRAM[0m
+[0;32mI (510) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (515) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (520) heap_init: At 400955E4 len 0000AA1C (42 KiB): IRAM[0m
+[0;32mI (527) spi_flash: detected chip: generic[0m
+[0;32mI (529) spi_flash: flash io: dio[0m
+[0;32mI (534) main_task: Started on CPU0[0m
+[0;32mI (536) main_task: Calling app_main()[0m
+[0;32mI (577) wifi:wifi driver task: 3ffd960c, prio:23, stack:6656, core=0[0m
+[0;32mI (596) wifi:wifi firmware version: e12a754[0m
+[0;32mI (596) wifi:wifi certification version: v7.0[0m
+[0;32mI (596) wifi:config NVS flash: enabled[0m
+[0;32mI (596) wifi:config nano formatting: disabled[0m
+[0;32mI (601) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (605) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (609) wifi:Init management short buffer num: 32[0m
+[0;32mI (614) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (618) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (622) wifi:Init static rx buffer num: 10[0m
+[0;32mI (626) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (631) wifi_init: rx ba win: 6[0m
+[0;32mI (632) wifi_init: accept mbox: 6[0m
+[0;32mI (635) wifi_init: tcpip mbox: 32[0m
+[0;32mI (638) wifi_init: udp mbox: 6[0m
+[0;32mI (641) wifi_init: tcp mbox: 6[0m
+[0;32mI (644) wifi_init: tcp tx win: 5760[0m
+[0;32mI (647) wifi_init: tcp rx win: 5760[0m
+[0;32mI (650) wifi_init: tcp mss: 1440[0m
+[0;32mI (653) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (657) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (662) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (670) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (756) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (822) wifi:mode : sta (fc:e8:c0:e1:b7:1c)[0m
+[0;32mI (823) wifi:enable tsf[0m
+[0;32mI (838) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (842) kws_web: Connecting to Wi-Fi 'Jai Shri Krishna'; the dashboard URL will be printed after DHCP[0m
+[0;32mI (850) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (858) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (864) main_task: Returned from app_main()[0m
+[0;32mI (976) wifi:connected with Jai Shri Krishna, aid = 1, channel 1, BW20, bssid = 8c:a3:99:0f:a7:b9[0m
+[0;32mI (977) wifi:security: WPA2-PSK, phy: bgn, rssi: -67, cipher(pairwise:0x3, group:0x1), pmf:0[0m
+[0;32mI (986) wifi:pm start, type: 1[0m
+
+[0;32mI (986) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1035) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1147) wifi:<ba-add>idx:0 (ifx:0, 8c:a3:99:0f:a7:b9), tid:0, ssn:2, winSize:64[0m
+[0;32mI (2277) esp_netif_handlers: sta ip: 192.168.1.2, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2278) kws_web: Dashboard available at http://192.168.1.2[0m
+[0;32mI (2438) kws_diag: Mic Peak: 32384 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (3631) kws_diag: Mic Peak: 32608 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (4829) kws_diag: Mic Peak: 32736 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (6023) kws_diag: Mic Peak: 32736 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (7217) kws_diag: Mic Peak:  7104 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (8410) kws_diag: Mic Peak: 29328 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (9597) kws_diag: Mic Peak: 29328 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (10791) kws_diag: Mic Peak: 29328 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (11991) kws_diag: Mic Peak:  6272 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (13187) kws_diag: Mic Peak:  6272 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (14382) kws_diag: Mic Peak:  4400 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (15582) kws_diag: Mic Peak:  9904 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (16778) kws_diag: Mic Peak: 11744 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (17973) kws_diag: Mic Peak: 11744 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (19166) kws_diag: Mic Peak: 11744 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (20356) kws_diag: Mic Peak:  6560 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (21555) kws_diag: Mic Peak:  5984 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (22752) kws_diag: Mic Peak:  5984 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (23951) kws_diag: Mic Peak:  5984 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (25146) kws_diag: Mic Peak: 27136 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (26346) kws_diag: Mic Peak: 27136 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (27537) kws_diag: Mic Peak: 27136 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (28737) kws_diag: Mic Peak:  6048 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (29934) kws_diag: Mic Peak:  5664 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (31127) kws_diag: Mic Peak:  5472 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (32322) kws_diag: Mic Peak:  6144 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (33518) kws_diag: Mic Peak:  7248 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (34717) kws_diag: Mic Peak:  7248 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (35917) kws_diag: Mic Peak:  7248 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (37113) kws_diag: Mic Peak:  6480 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (38312) kws_diag: Mic Peak:  6720 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (39509) kws_diag: Mic Peak:  6720 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (40704) kws_diag: Mic Peak:  7456 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (41898) kws_diag: Mic Peak:  7456 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (43098) kws_diag: Mic Peak: 32752 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (44296) kws_diag: Mic Peak: 32752 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (45491) kws_diag: Mic Peak: 14192 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (46686) kws_diag: Mic Peak: 14192 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (47882) kws_diag: Mic Peak:  3200 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (49078) kws_diag: Mic Peak:  4640 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (50268) kws_diag: Mic Peak:  4640 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (51471) kws_diag: Mic Peak:  3184 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (52666) kws_diag: Mic Peak:  4016 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (53865) kws_diag: Mic Peak:  4016 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (55062) kws_diag: Mic Peak:  3328 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (56259) kws_diag: Mic Peak:  3136 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (57454) kws_diag: Mic Peak:  3136 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (58650) kws_diag: Mic Peak:  3296 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (59846) kws_diag: Mic Peak:  3296 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (61041) kws_diag: Mic Peak:  3296 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (62242) kws_diag: Mic Peak:  6832 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (63436) kws_diag: Mic Peak:  6832 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (64637) kws_diag: Mic Peak:  4800 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (65835) kws_diag: Mic Peak:  4800 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (67035) kws_diag: Mic Peak:  3056 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (68230) kws_diag: Mic Peak:  3056 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (69428) kws_diag: Mic Peak:  2864 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (70621) kws_diag: Mic Peak:  2864 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (71818) kws_diag: Mic Peak:  2976 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (73015) kws_diag: Mic Peak:  2976 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (74211) kws_diag: Mic Peak:  3088 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (75410) kws_diag: Mic Peak:  3824 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (76609) kws_diag: Mic Peak:  3824 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (77805) kws_diag: Mic Peak:  3824 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (79005) kws_diag: Mic Peak:  3168 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (80201) kws_diag: Mic Peak:  3136 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (81397) kws_diag: Mic Peak:  3024 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (82593) kws_diag: Mic Peak:  2880 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (83786) kws_diag: Mic Peak:  3024 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (84984) kws_diag: Mic Peak:  3024 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (86180) kws_diag: Mic Peak:  3024 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (87378) kws_diag: Mic Peak:  3248 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (88572) kws_diag: Mic Peak:  3248 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (89772) kws_diag: Mic Peak:  6080 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (90968) kws_diag: Mic Peak:  6080 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (92161) kws_diag: Mic Peak:  2880 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (93358) kws_diag: Mic Peak:  2880 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (94554) kws_diag: Mic Peak:  3088 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (95752) kws_diag: Mic Peak:  3088 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (96948) kws_diag: Mic Peak:  3088 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (98148) kws_diag: Mic Peak:  3120 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (99344) kws_diag: Mic Peak:  3120 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (100538) kws_diag: Mic Peak:  3872 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (101738) kws_diag: Mic Peak:  3872 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (102932) kws_diag: Mic Peak:  2928 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (104132) kws_diag: Mic Peak:  2896 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (105330) kws_diag: Mic Peak:  2896 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (106529) kws_diag: Mic Peak:  2896 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (107722) kws_diag: Mic Peak:  2832 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (108914) kws_diag: Mic Peak:  3168 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (110113) kws_diag: Mic Peak:  3168 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (111308) kws_diag: Mic Peak:  3776 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (112505) kws_diag: Mic Peak:  4496 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (113702) kws_diag: Mic Peak:  4496 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (114900) kws_diag: Mic Peak:  3952 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (116100) kws_diag: Mic Peak:  3968 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (117293) kws_diag: Mic Peak:  3968 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (118487) kws_diag: Mic Peak:  4048 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (119687) kws_diag: Mic Peak:  4048 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (120874) kws_diag: Mic Peak:  4592 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (122065) kws_diag: Mic Peak:  4592 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (123265) kws_diag: Mic Peak:  4592 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (124461) kws_diag: Mic Peak:  4752 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (125653) kws_diag: Mic Peak: 10304 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (126851) kws_diag: Mic Peak: 10304 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (128050) kws_diag: Mic Peak: 10304 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (129245) kws_diag: Mic Peak:  4832 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (130443) kws_diag: Mic Peak:  3344 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (131634) kws_diag: Mic Peak:  3088 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (132822) kws_diag: Mic Peak:  5344 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (134023) kws_diag: Mic Peak:  5344 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (135221) kws_diag: Mic Peak:  3648 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (136413) kws_diag: Mic Peak:  2896 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (137615) kws_diag: Mic Peak:  2880 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (138815) kws_diag: Mic Peak:  3024 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (140010) kws_diag: Mic Peak:  3024 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (141209) kws_diag: Mic Peak:  3024 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (142402) kws_diag: Mic Peak:  3168 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (143601) kws_diag: Mic Peak:  3168 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (144794) kws_diag: Mic Peak:  3456 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (145991) kws_diag: Mic Peak:  4960 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (147187) kws_diag: Mic Peak:  4960 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (148380) kws_diag: Mic Peak:  8960 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (149576) kws_diag: Mic Peak:  8960 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (150774) kws_diag: Mic Peak:  4992 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (151968) kws_diag: Mic Peak:  4000 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (153165) kws_diag: Mic Peak:  4960 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (154360) kws_diag: Mic Peak:  4960 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (155554) kws_diag: Mic Peak:  5584 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (156753) kws_diag: Mic Peak:  5584 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (157946) kws_diag: Mic Peak:  5152 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (159143) kws_diag: Mic Peak:  9776 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (160340) kws_diag: Mic Peak:  9776 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (161535) kws_diag: Mic Peak: 18096 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (162733) kws_diag: Mic Peak: 18096 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (163929) kws_diag: Mic Peak: 18096 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (165133) kws_diag: Mic Peak:  6704 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (166326) kws_diag: Mic Peak:  6704 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (167527) kws_diag: Mic Peak:  7040 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (168725) kws_diag: Mic Peak:  7040 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (169920) kws_diag: Mic Peak:  3584 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (171117) kws_diag: Mic Peak:  3936 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (172313) kws_diag: Mic Peak:  3936 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (173510) kws_diag: Mic Peak:  3840 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (174704) kws_diag: Mic Peak:  4272 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (175897) kws_diag: Mic Peak:  9056 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (177095) kws_diag: Mic Peak:  9056 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (178291) kws_diag: Mic Peak: 11664 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (179485) kws_diag: Mic Peak: 11664 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (180671) kws_diag: Mic Peak:  9968 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (181866) kws_diag: Mic Peak:  9968 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (183061) kws_diag: Mic Peak:  5840 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (184246) kws_diag: Mic Peak: 17568 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (185438) kws_diag: Mic Peak: 17568 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (186640) kws_diag: Mic Peak: 17568 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (187836) kws_diag: Mic Peak: 32752 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (189032) kws_diag: Mic Peak: 32752 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (190231) kws_diag: Mic Peak: 32752 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (191429) kws_diag: Mic Peak:  7440 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (192625) kws_diag: Mic Peak:  7440 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (193821) kws_diag: Mic Peak:  4000 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (195017) kws_diag: Mic Peak: 10976 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (196213) kws_diag: Mic Peak: 32752 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (197411) kws_diag: Mic Peak: 32752 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (198607) kws_diag: Mic Peak: 32752 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (199801) kws_diag: Mic Peak: 32656 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (200996) kws_diag: Mic Peak: 32752 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (202193) kws_diag: Mic Peak: 32752 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (203388) kws_diag: Mic Peak: 32720 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (204586) kws_diag: Mic Peak: 32688 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (205783) kws_diag: Mic Peak: 32736 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (206984) kws_diag: Mic Peak: 32736 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (208181) kws_diag: Mic Peak: 24624 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (209379) kws_diag: Mic Peak: 24624 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (210573) kws_diag: Mic Peak: 24624 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (211768) kws_diag: Mic Peak: 32752 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (212965) kws_diag: Mic Peak: 32752 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (214162) kws_diag: Mic Peak:  7776 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (215359) kws_diag: Mic Peak: 24336 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (216556) kws_diag: Mic Peak: 24336 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (217753) kws_diag: Mic Peak: 24336 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (218950) kws_diag: Mic Peak:  6688 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (220146) kws_diag: Mic Peak:  6688 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (221344) kws_diag: Mic Peak:  7552 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (222539) kws_diag: Mic Peak:  7552 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (223740) kws_diag: Mic Peak:  7552 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (224939) kws_diag: Mic Peak:  5648 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (226134) kws_diag: Mic Peak:  4752 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (227332) kws_diag: Mic Peak:  3184 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m
+[0;32mI (228527) kws_diag: Mic Peak:  3216 | Top Pred: 'unknown    ' (99.6%) | Gate: HELD[0m

@@ -1,0 +1,476 @@
+Command: C:\Espressif\tools\python\v6.1\venv\Scripts\python.exe C:\esp\v6.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\yatin\OneDrive\Documents\always on device\firmware\build\keyword_spotter.elf C:\Users\yatin\OneDrive\Documents\always on device\firmware\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\tools\python\v6.1\venv\Scripts\python.exe' 'C:\esp\v6.1\esp-idf\tools\idf.py' '-p' 'COM3'
+tJ 8 01 0022:GSH�!.�0x (OWRO_EJU�I��E0x3 (PIFS_F*!=Q
+onfgsi:S%������5cl_d:�0���000d_dvx,._!�000,d_r0`0,q��000moeI o-"�:
+oa:3f4le:622loa�00��b�:584+�J��4���bb��:.�j
+t 408044
+[0;32mI (26) boot: ESP-IDF v6.1 2nd stage bootloader[0m
+[0;32mI (26) boot: compile time Nov  9 2026 17:23:33[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (28) boot: chip revision: v1.1[0m
+[0;32mI (30) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (34) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (38) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (41) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (48) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (55) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (61) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (68) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (74) boot: End of partition table[0m
+[0;32mI (78) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=244c4h (148676) map[0m
+[0;32mI (138) esp_image: segment 1: paddr=000344ec vaddr=3ffb0000 size=04534h ( 17716) load[0m
+[0;32mI (145) esp_image: segment 2: paddr=00038a28 vaddr=40080000 size=075f0h ( 30192) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a476ch (673644) map[0m
+[0;32mI (398) esp_image: segment 4: paddr=000e4794 vaddr=400875f0 size=0dff4h ( 57332) load[0m
+[0;32mI (422) esp_image: segment 5: paddr=000f2790 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (433) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (433) boot: Disabling RNG early entropy source...[0m
+[0;32mI (444) cpu_start: Multicore app[0m
+[0;32mI (452) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (452) cpu_start: Pro cpu start user code[0m
+[0;32mI (452) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (454) app_init: Application information:[0m
+[0;32mI (458) app_init: Project name:     keyword_spotter[0m
+[0;32mI (463) app_init: App version:      74082f4-dirty[0m
+[0;32mI (467) app_init: Compile time:     Nov  9 2026 17:21:51[0m
+[0;32mI (472) app_init: ELF file SHA256:  1cde66e04...[0m
+[0;32mI (476) app_init: ESP-IDF:          v6.1[0m
+[0;32mI (480) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (484) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (488) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (492) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (498) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (503) heap_init: At 3FFD1490 len 0000EB70 (58 KiB): DRAM[0m
+[0;32mI (508) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (514) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (519) heap_init: At 400955E4 len 0000AA1C (42 KiB): IRAM[0m
+[0;32mI (526) spi_flash: detected chip: generic[0m
+[0;32mI (528) spi_flash: flash io: dio[0m
+[0;32mI (533) main_task: Started on CPU0[0m
+[0;32mI (535) main_task: Calling app_main()[0m
+[0;32mI (575) wifi:wifi driver task: 3ffdf504, prio:23, stack:6656, core=0[0m
+[0;32mI (595) wifi:wifi firmware version: e12a754[0m
+[0;32mI (595) wifi:wifi certification version: v7.0[0m
+[0;32mI (595) wifi:config NVS flash: enabled[0m
+[0;32mI (595) wifi:config nano formatting: disabled[0m
+[0;32mI (600) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (605) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (608) wifi:Init management short buffer num: 32[0m
+[0;32mI (613) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (617) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (621) wifi:Init static rx buffer num: 10[0m
+[0;32mI (625) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (630) wifi_init: rx ba win: 6[0m
+[0;32mI (631) wifi_init: accept mbox: 6[0m
+[0;32mI (634) wifi_init: tcpip mbox: 32[0m
+[0;32mI (637) wifi_init: udp mbox: 6[0m
+[0;32mI (640) wifi_init: tcp mbox: 6[0m
+[0;32mI (643) wifi_init: tcp tx win: 5760[0m
+[0;32mI (646) wifi_init: tcp rx win: 5760[0m
+[0;32mI (649) wifi_init: tcp mss: 1440[0m
+[0;32mI (652) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (656) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (661) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (669) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (755) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (819) wifi:mode : sta (fc:e8:c0:e1:b7:1c)[0m
+[0;32mI (820) wifi:enable tsf[0m
+[0;32mI (832) kws_web: Connecting to Wi-Fi 'Jai Shri Krishna'; the dashboard URL will be printed after DHCP[0m
+[0;32mI (2306) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (2308) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2314) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2321) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (2440) wifi:connected with Jai Shri Krishna, aid = 2, channel 11, BW20, bssid = 8c:a3:99:0f:a7:b9[0m
+[0;32mI (2441) wifi:security: WPA2-PSK, phy: bgn, rssi: -61, cipher(pairwise:0x3, group:0x1), pmf:0[0m
+[0;32mI (2454) wifi:pm start, type: 1[0m
+
+[0;32mI (2455) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (2512) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2736) wifi:<ba-add>idx:0 (ifx:0, 8c:a3:99:0f:a7:b9), tid:0, ssn:2, winSize:64[0m
+[0;32mI (3851) esp_netif_handlers: sta ip: 192.168.1.11, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (3853) kws_web: Dashboard available at http://192.168.1.11[0m
+[1;31mE (6839) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (6839) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (6839) task_wdt: Tasks currently running:[0m
+[1;31mE (6839) task_wdt: CPU 0: main[0m
+[1;31mE (6839) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (6839) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400EF09B:0x3FFB2280 0x40083381:0x3FFB22C0 0x40169195:0x3FFD2EF0 0x401687C9:0x3FFD3080 0x40168816:0x3FFD30C0 0x400DC205:0x3FFD3100 0x400DBE7B:0x3FFD36D0 0x400D57C9:0x3FFD3710
+
+[1;31mE (11839) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (11839) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (11839) task_wdt: Tasks currently running:[0m
+[1;31mE (11839) task_wdt: CPU 0: main[0m
+[1;31mE (11839) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (11839) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400EF09B:0x3FFB2280 0x40083381:0x3FFB22C0 0x40168E4C:0x3FFD2EF0 0x401687C9:0x3FFD3080 0x40168816:0x3FFD30C0 0x400DC205:0x3FFD3100 0x400DBE7B:0x3FFD36D0 0x400D57C9:0x3FFD3710
+
+[1;31mE (16839) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (16839) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (16839) task_wdt: Tasks currently running:[0m
+[1;31mE (16839) task_wdt: CPU 0: main[0m
+[1;31mE (16839) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (16839) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400EF09B:0x3FFB2280 0x40083381:0x3FFB22C0 0x401685BF:0x3FFD3080 0x40167AF2:0x3FFD30C0 0x400DC1EB:0x3FFD3100 0x400DBE7B:0x3FFD36D0 0x400D57C9:0x3FFD3710
+
+[1;31mE (21839) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (21839) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (21839) task_wdt: Tasks currently running:[0m
+[1;31mE (21839) task_wdt: CPU 0: main[0m
+[1;31mE (21839) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (21839) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400EF09B:0x3FFB2280 0x40083381:0x3FFB22C0 0x40169133:0x3FFD2EF0 0x401687C9:0x3FFD3080 0x40168816:0x3FFD30C0 0x400DC205:0x3FFD3100 0x400DBE7B:0x3FFD36D0 0x400D57C9:0x3FFD3710
+
+[1;31mE (26839) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (26839) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (26839) task_wdt: Tasks currently running:[0m
+[1;31mE (26839) task_wdt: CPU 0: main[0m
+[1;31mE (26839) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (26839) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400EF09B:0x3FFB2280 0x40083381:0x3FFB22C0 0x4016912E:0x3FFD2EF0 0x401687C9:0x3FFD3080 0x40168816:0x3FFD30C0 0x400DC205:0x3FFD3100 0x400DBE7B:0x3FFD36D0 0x400D57C9:0x3FFD3710
+
+[1;31mE (31839) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (31839) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (31839) task_wdt: Tasks currently running:[0m
+[1;31mE (31839) task_wdt: CPU 0: main[0m
+[1;31mE (31839) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (31839) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400EF09B:0x3FFB2280 0x40083381:0x3FFB22C0 0x40169129:0x3FFD2EF0 0x401687C9:0x3FFD3080 0x40167AF2:0x3FFD30C0 0x400DC1EB:0x3FFD3100 0x400DBE7B:0x3FFD36D0 0x400D57C9:0x3FFD3710
+
+[1;31mE (36839) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (36839) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (36839) task_wdt: Tasks currently running:[0m
+[1;31mE (36839) task_wdt: CPU 0: main[0m
+[1;31mE (36839) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (36839) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400EF09B:0x3FFB2280 0x40083381:0x3FFB22C0 0x40168E46:0x3FFD2EF0 0x401687C9:0x3FFD3080 0x40167AF2:0x3FFD30C0 0x400DC1EB:0x3FFD3100 0x400DBE7B:0x3FFD36D0 0x400D57C9:0x3FFD3710
+
+[1;31mE (41839) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (41839) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (41839) task_wdt: Tasks currently running:[0m
+[1;31mE (41839) task_wdt: CPU 0: main[0m
+[1;31mE (41839) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (41839) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400EF09B:0x3FFB2280 0x40083381:0x3FFB22C0 0x40168DD9:0x3FFD2EF0 0x401687C9:0x3FFD3080 0x40168816:0x3FFD30C0 0x400DC205:0x3FFD3100 0x400DBE7B:0x3FFD36D0 0x400D57C9:0x3FFD3710
+
+[1;31mE (46839) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (46839) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (46839) task_wdt: Tasks currently running:[0m
+[1;31mE (46839) task_wdt: CPU 0: main[0m
+[1;31mE (46839) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (46839) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400EF09B:0x3FFB2280 0x40083381:0x3FFB22C0 0x40169127:0x3FFD2EF0 0x401687C9:0x3FFD3080 0x40167AF2:0x3FFD30C0 0x400DC1EB:0x3FFD3100 0x400DBE7B:0x3FFD36D0 0x400D57C9:0x3FFD3710
+
+[1;31mE (51839) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (51839) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (51839) task_wdt: Tasks currently running:[0m
+[1;31mE (51839) task_wdt: CPU 0: main[0m
+[1;31mE (51839) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (51839) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400EF09B:0x3FFB2280 0x40083381:0x3FFB22C0 0x40168DC3:0x3FFD2EF0 0x401687C9:0x3FFD3080 0x40168816:0x3FFD30C0 0x400DC205:0x3FFD3100 0x400DBE7B:0x3FFD36D0 0x400D57C9:0x3FFD3710
+
+[1;31mE (56839) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (56839) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (56839) task_wdt: Tasks currently running:[0m
+[1;31mE (56839) task_wdt: CPU 0: main[0m
+[1;31mE (56839) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (56839) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400EF09B:0x3FFB2280 0x40083381:0x3FFB22C0 0x40169121:0x3FFD2EF0 0x401687C9:0x3FFD3080 0x40168816:0x3FFD30C0 0x400DC205:0x3FFD3100 0x400DBE7B:0x3FFD36D0 0x400D57C9:0x3FFD3710
+
+[1;31mE (61839) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (61839) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (61839) task_wdt: Tasks currently running:[0m
+[1;31mE (61839) task_wdt: CPU 0: main[0m
+[1;31mE (61839) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (61839) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400EF09B:0x3FFB2280 0x40083381:0x3FFB22C0 0x401687BD:0x3FFD3080 0x40168816:0x3FFD30C0 0x400DC205:0x3FFD3100 0x400DBE7B:0x3FFD36D0 0x400D57C9:0x3FFD3710
+
+[1;31mE (66839) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (66839) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (66839) task_wdt: Tasks currently running:[0m
+[1;31mE (66839) task_wdt: CPU 0: main[0m
+[1;31mE (66839) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (66839) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400EF09B:0x3FFB2280 0x40083381:0x3FFB22C0 0x40002997:0x3FFD30F0 0x400DC1AE:0x3FFD3100 0x400DBE7B:0x3FFD36D0 0x400D57C9:0x3FFD3710
+
+[1;31mE (71839) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (71839) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (71839) task_wdt: Tasks currently running:[0m
+[1;31mE (71839) task_wdt: CPU 0: main[0m
+[1;31mE (71839) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (71839) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400EF09B:0x3FFB2280 0x40083381:0x3FFB22C0 0x40168DAB:0x3FFD2EF0 0x401687C9:0x3FFD3080 0x40167AF2:0x3FFD30C0 0x400DC1EB:0x3FFD3100 0x400DBE7B:0x3FFD36D0 0x400D57C9:0x3FFD3710
+
+[1;31mE (76839) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (76839) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (76839) task_wdt: Tasks currently running:[0m
+[1;31mE (76839) task_wdt: CPU 0: main[0m
+[1;31mE (76839) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (76839) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400EF09B:0x3FFB2280 0x40083381:0x3FFB22C0 0x40168729:0x3FFD3080 0x40167AF2:0x3FFD30C0 0x400DC1BA:0x3FFD3100 0x400DBE7B:0x3FFD36D0 0x400D57C9:0x3FFD3710
+
+[1;31mE (81839) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (81839) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (81839) task_wdt: Tasks currently running:[0m
+[1;31mE (81839) task_wdt: CPU 0: main[0m
+[1;31mE (81839) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (81839) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400EF09B:0x3FFB2280 0x40083381:0x3FFB22C0 0x40168DEB:0x3FFD2EF0 0x401687C9:0x3FFD3080 0x40167AF2:0x3FFD30C0 0x400DC1EB:0x3FFD3100 0x400DBE7B:0x3FFD36D0 0x400D57C9:0x3FFD3710
+
+[1;31mE (86839) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (86839) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (86839) task_wdt: Tasks currently running:[0m
+[1;31mE (86839) task_wdt: CPU 0: main[0m
+[1;31mE (86839) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (86839) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400EF09B:0x3FFB2280 0x40083381:0x3FFB22C0 0x40168680:0x3FFD3080 0x40168816:0x3FFD30C0 0x400DC205:0x3FFD3100 0x400DBE7B:0x3FFD36D0 0x400D57C9:0x3FFD3710
+
+[1;31mE (91839) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (91839) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (91839) task_wdt: Tasks currently running:[0m
+[1;31mE (91839) task_wdt: CPU 0: main[0m
+[1;31mE (91839) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (91839) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400EF09B:0x3FFB2280 0x40083381:0x3FFB22C0 0x4016914F:0x3FFD2EF0 0x401687C9:0x3FFD3080 0x40167AF2:0x3FFD30C0 0x400DC1EB:0x3FFD3100 0x400DBE7B:0x3FFD36D0 0x400D57C9:0x3FFD3710
+
+[0;33mW (92963) httpd_uri: httpd_uri: URI '/favicon.ico' not found[0m
+[0;33mW (92964) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[1;31mE (96839) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (96839) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (96839) task_wdt: Tasks currently running:[0m
+[1;31mE (96839) task_wdt: CPU 0: main[0m
+[1;31mE (96839) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (96839) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400EF09B:0x3FFB2280 0x40083381:0x3FFB22C0 0x401692E4:0x3FFD3090 0x40168845:0x3FFD30C0 0x400DC205:0x3FFD3100 0x400DBE7B:0x3FFD36D0 0x400D57C9:0x3FFD3710
+
+[1;31mE (101839) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (101839) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (101839) task_wdt: Tasks currently running:[0m
+[1;31mE (101839) task_wdt: CPU 0: main[0m
+[1;31mE (101839) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (101839) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400EF09B:0x3FFB2280 0x40083381:0x3FFB22C0 0x4016919D:0x3FFD2EF0 0x401687C9:0x3FFD3080 0x40168816:0x3FFD30C0 0x400DC205:0x3FFD3100 0x400DBE7B:0x3FFD36D0 0x400D57C9:0x3FFD3710
+
+[1;31mE (106839) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (106839) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (106839) task_wdt: Tasks currently running:[0m
+[1;31mE (106839) task_wdt: CPU 0: main[0m
+[1;31mE (106839) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (106839) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400EF09B:0x3FFB2280 0x40083381:0x3FFB22C0 0x401687E3:0x3FFD3080 0x40167AF2:0x3FFD30C0 0x400DC1BA:0x3FFD3100 0x400DBE7B:0x3FFD36D0 0x400D57C9:0x3FFD3710
+
+[1;31mE (111839) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (111839) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (111839) task_wdt: Tasks currently running:[0m
+[1;31mE (111839) task_wdt: CPU 0: main[0m
+[1;31mE (111839) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (111839) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400EF09B:0x3FFB2280 0x40083381:0x3FFB22C0 0x400029C2:0x3FFD30F0 0x400DC1AE:0x3FFD3100 0x400DBE7B:0x3FFD36D0 0x400D57C9:0x3FFD3710
+
+[1;31mE (116839) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (116839) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (116839) task_wdt: Tasks currently running:[0m
+[1;31mE (116839) task_wdt: CPU 0: main[0m
+[1;31mE (116839) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (116839) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400EF09B:0x3FFB2280 0x40083381:0x3FFB22C0 0x40168DE8:0x3FFD2EF0 0x401687C9:0x3FFD3080 0x40167AF2:0x3FFD30C0 0x400DC1EB:0x3FFD3100 0x400DBE7B:0x3FFD36D0 0x400D57C9:0x3FFD3710
+
+[1;31mE (121839) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (121839) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (121839) task_wdt: Tasks currently running:[0m
+[1;31mE (121839) task_wdt: CPU 0: main[0m
+[1;31mE (121839) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (121839) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400EF09B:0x3FFB2280 0x40083381:0x3FFB22C0 0x40169121:0x3FFD2EF0 0x401687C9:0x3FFD3080 0x40167AF2:0x3FFD30C0 0x400DC1EB:0x3FFD3100 0x400DBE7B:0x3FFD36D0 0x400D57C9:0x3FFD3710
+
+[1;31mE (126839) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (126839) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (126839) task_wdt: Tasks currently running:[0m
+[1;31mE (126839) task_wdt: CPU 0: main[0m
+[1;31mE (126839) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (126839) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400EF09B:0x3FFB2280 0x40083381:0x3FFB22C0 0x40168DF0:0x3FFD2EF0 0x401687C9:0x3FFD3080 0x40167AF2:0x3FFD30C0 0x400DC1EB:0x3FFD3100 0x400DBE7B:0x3FFD36D0 0x400D57C9:0x3FFD3710
+
+[1;31mE (131839) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (131839) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (131839) task_wdt: Tasks currently running:[0m
+[1;31mE (131839) task_wdt: CPU 0: main[0m
+[1;31mE (131839) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (131839) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400EF09B:0x3FFB2280 0x40083381:0x3FFB22C0 0x40168FBF:0x3FFD2EF0 0x401687C9:0x3FFD3080 0x40168816:0x3FFD30C0 0x400DC205:0x3FFD3100 0x400DBE7B:0x3FFD36D0 0x400D57C9:0x3FFD3710
+
+[1;31mE (136839) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (136839) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (136839) task_wdt: Tasks currently running:[0m
+[1;31mE (136839) task_wdt: CPU 0: main[0m
+[1;31mE (136839) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (136839) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400EF09B:0x3FFB2280 0x40083381:0x3FFB22C0 0x40168DFF:0x3FFD2EF0 0x401687C9:0x3FFD3080 0x40168816:0x3FFD30C0 0x400DC205:0x3FFD3100 0x400DBE7B:0x3FFD36D0 0x400D57C9:0x3FFD3710
+
+[1;31mE (141839) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (141839) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (141839) task_wdt: Tasks currently running:[0m
+[1;31mE (141839) task_wdt: CPU 0: main[0m
+[1;31mE (141839) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (141839) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400EF09B:0x3FFB2280 0x40083381:0x3FFB22C0 0x400029BF:0x3FFD30F0 0x400DC1AE:0x3FFD3100 0x400DBE7B:0x3FFD36D0 0x400D57C9:0x3FFD3710
+
+esJun  8 2016 0:2:5
+st:0x1 (POWERNREE),oot:0x13 (SPIFATFLSHBOOT)
+confisi:0,SPIWP0xee
+cl_dv000q_drv:000,d_dv0x0c0_drv:0x00,h_dv000wp_drv:x00
+md:DO cock div:2
+od:xff040,len:6272
+la:0407800,len:1584lod0x4008000,len:38
+nty 0x4008064
+[0;32mI (26) boot: ESP-IDF v6.1 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Nov  9 2026 17:23:33[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (28) boot: chip revision: v1.1[0m
+[0;32mI (30) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (34) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (38) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (41) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (48) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (55) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (61) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (68) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (74) boot: End of partition table[0m
+[0;32mI (78) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=244c4h (148676) map[0m
+[0;32mI (138) esp_image: segment 1: paddr=000344ec vaddr=3ffb0000 size=04534h ( 17716) load[0m
+[0;32mI (145) esp_image: segment 2: paddr=00038a28 vaddr=40080000 size=075f0h ( 30192) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a476ch (673644) map[0m
+[0;32mI (398) esp_image: segment 4: paddr=000e4794 vaddr=400875f0 size=0dff4h ( 57332) load[0m
+[0;32mI (422) esp_image: segment 5: paddr=000f2790 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (433) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (433) boot: Disabling RNG early entropy source...[0m
+[0;32mI (444) cpu_start: Multicore app[0m
+[0;32mI (452) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (452) cpu_start: Pro cpu start user code[0m
+[0;32mI (452) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (454) app_init: Application information:[0m
+[0;32mI (458) app_init: Project name:     keyword_spotter[0m
+[0;32mI (463) app_init: App version:      74082f4-dirty[0m
+[0;32mI (467) app_init: Compile time:     Nov  9 2026 17:21:51[0m
+[0;32mI (472) app_init: ELF file SHA256:  1cde66e04...[0m
+[0;32mI (476) app_init: ESP-IDF:          v6.1[0m
+[0;32mI (480) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (484) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (488) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (492) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (498) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (503) heap_init: At 3FFD1490 len 0000EB70 (58 KiB): DRAM[0m
+[0;32mI (508) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (514) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (519) heap_init: At 400955E4 len 0000AA1C (42 KiB): IRAM[0m
+[0;32mI (526) spi_flash: detected chip: generic[0m
+[0;32mI (528) spi_flash: flash io: dio[0m
+[0;32mI (533) main_task: Started on CPU0[0m
+[0;32mI (535) main_task: Calling app_main()[0m
+[0;32mI (576) wifi:wifi driver task: 3ffdf504, prio:23, stack:6656, core=0[0m
+[0;32mI (596) wifi:wifi firmware version: e12a754[0m
+[0;32mI (596) wifi:wifi certification version: v7.0[0m
+[0;32mI (596) wifi:config NVS flash: enabled[0m
+[0;32mI (597) wifi:config nano formatting: disabled[0m
+[0;32mI (601) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (606) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (610) wifi:Init management short buffer num: 32[0m
+[0;32mI (614) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (618) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (622) wifi:Init static rx buffer num: 10[0m
+[0;32mI (626) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (631) wifi_init: rx ba win: 6[0m
+[0;32mI (633) wifi_init: accept mbox: 6[0m
+[0;32mI (636) wifi_init: tcpip mbox: 32[0m
+[0;32mI (639) wifi_init: udp mbox: 6[0m
+[0;32mI (641) wifi_init: tcp mbox: 6[0m
+[0;32mI (644) wifi_init: tcp tx win: 5760[0m
+[0;32mI (647) wifi_init: tcp rx win: 5760[0m
+[0;32mI (651) wifi_init: tcp mss: 1440[0m
+[0;32mI (654) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (657) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (662) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (670) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (759) wifi:mode : sta (fc:e8:c0:e1:b7:1c)[0m
+[0;32mI (760) wifi:enable tsf[0m
+[0;32mI (777) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (779) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (782) kws_web: Connecting to Wi-Fi 'Jai Shri Krishna'; the dashboard URL will be printed after DHCP[0m
+[0;32mI (791) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (800) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (925) wifi:connected with Jai Shri Krishna, aid = 1, channel 11, BW20, bssid = 8c:a3:99:0f:a7:b9[0m
+[0;32mI (926) wifi:security: WPA2-PSK, phy: bgn, rssi: -60, cipher(pairwise:0x3, group:0x1), pmf:0[0m
+[0;32mI (935) wifi:pm start, type: 1[0m
+
+[0;32mI (935) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (975) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1090) wifi:<ba-add>idx:0 (ifx:0, 8c:a3:99:0f:a7:b9), tid:0, ssn:2, winSize:64[0m
+[0;32mI (2120) esp_netif_handlers: sta ip: 192.168.1.11, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2121) kws_web: Dashboard available at http://192.168.1.11[0m
+[1;31mE (6794) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (6794) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (6794) task_wdt: Tasks currently running:[0m
+[1;31mE (6794) task_wdt: CPU 0: main[0m
+[1;31mE (6794) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (6794) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400EF09B:0x3FFB2280 0x40083381:0x3FFB22C0 0x40168DFF:0x3FFD2EF0 0x401687C9:0x3FFD3080 0x40168816:0x3FFD30C0 0x400DC205:0x3FFD3100 0x400DBE7B:0x3FFD36D0 0x400D57C9:0x3FFD3710
+

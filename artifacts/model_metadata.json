@@ -1,0 +1,25 @@
+{
+  "sample_rate": 16000,
+  "window_samples": 16000,
+  "frame_count": 99,
+  "mel_bins": 40,
+  "labels": [
+    "start",
+    "stop",
+    "next",
+    "previous",
+    "volume_up",
+    "volume_down",
+    "lights_on",
+    "lights_off",
+    "unknown"
+  ],
+  "input_shape": [
+    99,
+    40,
+    1
+  ],
+  "quantized": true,
+  "samples_per_class": 200,
+  "val_accuracy": 0.949999988079071
+}

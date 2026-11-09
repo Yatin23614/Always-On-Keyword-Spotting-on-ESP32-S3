@@ -1,0 +1,123 @@
+Command: C:\Espressif\tools\python\v6.1\venv\Scripts\python.exe C:\esp\v6.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\yatin\OneDrive\Documents\always on device\firmware\build\keyword_spotter.elf C:\Users\yatin\OneDrive\Documents\always on device\firmware\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\tools\python\v6.1\venv\Scripts\python.exe' 'C:\esp\v6.1\esp-idf\tools\idf.py'
+ts un 8 2016 00:22:7
+
+rt:0x1 (POWERONREST)bot:0x13 (SPI_FAT_LAS_BOT)
+configsip 0 SIWP:0xee
+clk_drv0x0,qdrv:0x00,d_drv:000cs_drv:0x00,hd_drv:x00wpdrv:0x00
+modeDI, loc div:2
+load:x3ff040,len:6272
+load0x407000,len:15824loa:040080400,len:398enry x40080644
+[0;32mI (26) boot: ESP-IDF v6.1 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Nov  9 2026 17:23:33[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (28) boot: chip revision: v1.1[0m
+[0;32mI (30) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (34) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (38) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (41) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (48) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (55) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (61) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (68) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (74) boot: End of partition table[0m
+[0;32mI (78) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=244a4h (148644) map[0m
+[0;32mI (138) esp_image: segment 1: paddr=000344cc vaddr=3ffb0000 size=04534h ( 17716) load[0m
+[0;32mI (145) esp_image: segment 2: paddr=00038a08 vaddr=40080000 size=07610h ( 30224) load[0m
+[0;32mI (158) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a4854h (673876) map[0m
+[0;32mI (398) esp_image: segment 4: paddr=000e487c vaddr=40087610 size=0dfd4h ( 57300) load[0m
+[0;32mI (422) esp_image: segment 5: paddr=000f2858 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (433) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (433) boot: Disabling RNG early entropy source...[0m
+[0;32mI (444) cpu_start: Multicore app[0m
+[0;32mI (452) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (452) cpu_start: Pro cpu start user code[0m
+[0;32mI (452) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (454) app_init: Application information:[0m
+[0;32mI (458) app_init: Project name:     keyword_spotter[0m
+[0;32mI (463) app_init: App version:      74082f4-dirty[0m
+[0;32mI (467) app_init: Compile time:     Nov  9 2026 17:21:51[0m
+[0;32mI (472) app_init: ELF file SHA256:  611ba1c53...[0m
+[0;32mI (476) app_init: ESP-IDF:          v6.1[0m
+[0;32mI (480) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (484) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (488) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (492) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (498) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (503) heap_init: At 3FFD1B88 len 0000E478 (57 KiB): DRAM[0m
+[0;32mI (508) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (514) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (519) heap_init: At 400955E4 len 0000AA1C (42 KiB): IRAM[0m
+[0;32mI (526) spi_flash: detected chip: generic[0m
+[0;32mI (528) spi_flash: flash io: dio[0m
+[0;32mI (533) main_task: Started on CPU0[0m
+[0;32mI (534) main_task: Calling app_main()[0m
+[0;32mI (577) wifi:wifi driver task: 3ffd9680, prio:23, stack:6656, core=0[0m
+[0;32mI (598) wifi:wifi firmware version: e12a754[0m
+[0;32mI (598) wifi:wifi certification version: v7.0[0m
+[0;32mI (598) wifi:config NVS flash: enabled[0m
+[0;32mI (598) wifi:config nano formatting: disabled[0m
+[0;32mI (603) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (608) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (611) wifi:Init management short buffer num: 32[0m
+[0;32mI (616) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (620) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (624) wifi:Init static rx buffer num: 10[0m
+[0;32mI (628) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (633) wifi_init: rx ba win: 6[0m
+[0;32mI (634) wifi_init: accept mbox: 6[0m
+[0;32mI (638) wifi_init: tcpip mbox: 32[0m
+[0;32mI (641) wifi_init: udp mbox: 6[0m
+[0;32mI (643) wifi_init: tcp mbox: 6[0m
+[0;32mI (646) wifi_init: tcp tx win: 5760[0m
+[0;32mI (649) wifi_init: tcp rx win: 5760[0m
+[0;32mI (653) wifi_init: tcp mss: 1440[0m
+[0;32mI (655) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (659) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (664) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (672) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (758) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (820) wifi:mode : sta (fc:e8:c0:e1:b7:1c)[0m
+[0;32mI (821) wifi:enable tsf[0m
+[0;32mI (837) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (832) kws_web: Connecting to Wi-Fi 'Jai Shri Krishna'; the dashboard URL will be printed after DHCP[0m
+[0;32mI (845) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (853) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (859) main_task: Returned from app_main()[0m
+[0;32mI (970) wifi:connected with Jai Shri Krishna, aid = 1, channel 1, BW20, bssid = 8c:a3:99:0f:a7:b9[0m
+[0;32mI (971) wifi:security: WPA2-PSK, phy: bgn, rssi: -66, cipher(pairwise:0x3, group:0x1), pmf:0[0m
+[0;32mI (980) wifi:pm start, type: 1[0m
+
+[0;32mI (980) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (995) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1048) wifi:<ba-add>idx:0 (ifx:0, 8c:a3:99:0f:a7:b9), tid:0, ssn:3, winSize:64[0m
+[0;32mI (2325) esp_netif_handlers: sta ip: 192.168.1.2, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2329) kws_web: Dashboard available at http://192.168.1.2[0m
+[0;33mW (95051) httpd_uri: httpd_uri: URI '/favicon.ico' not found[0m
+[0;33mW (95052) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;33mW (117634) httpd_txrx: httpd_sock_err: error in send : 104[0m
+[0;33mW (117635) httpd_uri: httpd_uri: uri handler execution failed[0m
+[0;33mW (118415) httpd_txrx: httpd_sock_err: error in send : 104[0m
+[0;33mW (118416) httpd_uri: httpd_uri: uri handler execution failed[0m
+[0;33mW (119323) httpd_txrx: httpd_sock_err: error in recv : 104[0m
+tsR� @8206002:5SHH�:� (OERNEJUI�:�1&PIF�*�e1M!�%=Qcofis:SA5
+ckd:00`�:x0,_dv:�0|�0x0hddv:�0�}�J�000
+mdDI�Q �k� ��2lod�3���blS:27loa�04�	���b�182oa�04����b�39j
+A�Ѵ>��4����j
+[0;32mI (26) boot: ESP-IDF v6.1 2nd stage bootloader[0m
+[0;32mI (26) boot: compile time Nov  9 2026 17:23:33[0m
+[0;32mI (26) boot: Multicore bootloader[0m
+[0;32mI (28) boot: chip revision: v1.1[0m
+[0;32mI (30) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (34) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (38) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (41) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (48) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (55) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (61) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (68) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (74) boot: End of partition table[0m
+[0;32mI (78) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=244a4h (148644) map[0m
+[0;32mI (138) esp_image: segment 1: paddr=000344cc vaddr=3ffb0000 size=04534h ( 17716) load[0m
+[
