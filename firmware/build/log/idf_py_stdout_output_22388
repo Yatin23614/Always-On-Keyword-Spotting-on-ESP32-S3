@@ -1,83 +1,0 @@
-Command: ninja flash
-[1/5] C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\yatin\OneDrive\Documents\always on device\firmware\build" && C:\Espressif\tools\python\v6.1\venv\Scripts\python.exe C:/esp/v6.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app "C:/Users/yatin/OneDrive/Documents/always on device/firmware/build/partition_table/partition-table.bin" "C:/Users/yatin/OneDrive/Documents/always on device/firmware/build/keyword_spotter.bin""
-keyword_spotter.bin binary size 0xe2840 bytes. Smallest app partition is 0x100000 bytes. 0x1d7c0 bytes (12%) free.
-[2/5] Performing build step for 'bootloader'
-[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\yatin\OneDrive\Documents\always on device\firmware\build\bootloader" && C:\Espressif\tools\python\v6.1\venv\Scripts\python.exe C:/esp/v6.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 "C:/Users/yatin/OneDrive/Documents/always on device/firmware/build/bootloader/bootloader.bin""
-Bootloader binary size 0x6640 bytes. 0x9c0 bytes (9%) free.
-[3/5] No install step for 'bootloader'
-[4/5] Completed 'bootloader'
-[4/5] Running utility command for flash
-esptool --chip esp32 -p COM3 -b 460800 --before=default-reset --after=hard-reset write-flash --flash-mode dio --flash-freq 40m --flash-size 4MB 0x1000 bootloader/bootloader.bin 0x8000 partition_table/partition-table.bin 0x10000 keyword_spotter.bin --diff-with bootloader/bootloader_flashed.bin partition_table/partition-table_flashed.bin keyword_spotter_flashed.bin
-esptool v5.6.0
-Serial port COM3:
-Connecting.....
-Connected to ESP32 on COM3:
-Chip type:          ESP32-D0WDQ6 (revision v1.1)
-Features:           Wi-Fi, BT, Dual Core + LP Core, 240MHz, Vref calibration in eFuse, Coding Scheme None
-Crystal frequency:  40MHz
-MAC:                fc:e8:c0:e1:b7:1c
-
-Uploading stub flasher...
-Running stub flasher...
-Stub flasher running.
-Changing baud rate to 460800...
-Changed.
-
-Configuring flash size...
-
-Writing 'bootloader/bootloader.bin' at 0x00001000...
-SHA digest in image updated.
-SHA digest in image updated.
-No changed sectors found, verifying if data is in flash...
-'bootloader/bootloader.bin' at 0x00001000 verified.
-
-Writing 'partition_table/partition-table.bin' at 0x00008000...
-No changed sectors found, verifying if data is in flash...
-'partition_table/partition-table.bin' at 0x00008000 verified.
-
-Writing 'keyword_spotter.bin' at 0x00010000...
-Changed data sectors found, fast reflashing...
-Reflashing 1 changed sector at 0x00010000...
-Flash will be erased from 0x00010000 to 0x00010fff...
-Compressed 4096 bytes to 1934...
-Writing at 0x00011000 ------------------------------ 100.0% 1.89kB/1.89kB [0s] 
-Wrote 4096 bytes (1934 compressed) at 0x00010000 in 0.1 seconds (631.8 kbit/s).
-Reflashing 2 changed sectors at 0x00020000...
-Flash will be erased from 0x00020000 to 0x00021fff...
-Compressed 8192 bytes to 3512...
-Writing at 0x00022000 ------------------------------ 100.0% 3.43kB/3.43kB [0s] 
-Wrote 8192 bytes (3512 compressed) at 0x00020000 in 0.1 seconds (723.0 kbit/s).
-Reflashing 1 changed sector at 0x00023000...
-Flash will be erased from 0x00023000 to 0x00023fff...
-Compressed 4096 bytes to 2821...
-Writing at 0x00024000 ------------------------------ 100.0% 2.75kB/2.75kB [0s] 
-Wrote 4096 bytes (2821 compressed) at 0x00023000 in 0.1 seconds (441.4 kbit/s).
-Reflashing 4 changed sectors at 0x00026000...
-Flash will be erased from 0x00026000 to 0x00029fff...
-Compressed 16384 bytes to 9051...
-Writing at 0x0002a000 ------------------------------ 100.0% 8.84kB/8.84kB [0s] 
-Wrote 16384 bytes (9051 compressed) at 0x00026000 in 0.2 seconds (582.2 kbit/s).
-Reflashing 4 changed sectors at 0x0002c000...
-Flash will be erased from 0x0002c000 to 0x0002ffff...
-Compressed 16384 bytes to 8759...
-Writing at 0x00030000 ------------------------------ 100.0% 8.55kB/8.55kB [0s] 
-Wrote 16384 bytes (8759 compressed) at 0x0002c000 in 0.2 seconds (590.3 kbit/s).
-Reflashing 2 changed sectors at 0x00034000...
-Flash will be erased from 0x00034000 to 0x00035fff...
-Compressed 8192 bytes to 2679...
-Writing at 0x00036000 ------------------------------ 100.0% 2.62kB/2.62kB [0s] 
-Wrote 8192 bytes (2679 compressed) at 0x00034000 in 0.1 seconds (949.1 kbit/s).
-Reflashing 3 changed sectors at 0x00037000...
-Flash will be erased from 0x00037000 to 0x00039fff...
-Compressed 12288 bytes to 6541...
-Writing at 0x0003a000 ------------------------------ 100.0% 6.39kB/6.39kB [0s] 
-Wrote 12288 bytes (6541 compressed) at 0x00037000 in 0.2 seconds (597.4 kbit/s).
-Reflashing 183 changed sectors at 0x0003c000...
-Flash will be erased from 0x0003c000 to 0x000f2fff...
-Compressed 749568 bytes to 557157...
-Writing at 0x00041b71  -----------------------------   2.9% 16.00kB/544.10kB [0s] Writing at 0x00046d2e - ----------------------------   5.9% 32.00kB/544.10kB [0s] Writing at 0x0004c10c -- ---------------------------   8.8% 48.00kB/544.10kB [1s] Writing at 0x00051456 --- --------------------------  11.8% 64.00kB/544.10kB [1s] Writing at 0x00056531 ---- -------------------------  14.7% 80.00kB/544.10kB [2s] Writing at 0x0005b627 ----- ------------------------  17.6% 96.00kB/544.10kB [2s] Writing at 0x000607df ------ -----------------------  20.6% 112.00kB/544.10kB [2s] Writing at 0x00065c00 ------- ----------------------  23.5% 128.00kB/544.10kB [3s] Writing at 0x0006b24e ------- ----------------------  26.5% 144.00kB/544.10kB [3s] Writing at 0x00070ab6 -------- ---------------------  29.4% 160.00kB/544.10kB [4s] Writing at 0x000760e5 --------- --------------------  32.3% 176.00kB/544.10kB [4s] Writing at 0x0007bc0c ---------- -------------------  35.3% 192.00kB/544.10kB [4s] Writing at 0x00081233 ----------- ------------------  38.2% 208.00kB/544.10kB [5s] Writing at 0x00086763 ------------ -----------------  41.2% 224.00kB/544.10kB [5s] Writing at 0x0008be0f ------------- ----------------  44.1% 240.00kB/544.10kB [6s] Writing at 0x00091a3f -------------- ---------------  47.1% 256.00kB/544.10kB [6s] Writing at 0x000975b3 -------------- ---------------  50.0% 272.00kB/544.10kB [6s] Writing at 0x0009cd48 --------------- --------------  52.9% 288.00kB/544.10kB [7s] Writing at 0x000a2522 ---------------- -------------  55.9% 304.00kB/544.10kB [7s] Writing at 0x000a80ed ----------------- ------------  58.8% 320.00kB/544.10kB [8s] Writing at 0x000adb50 ------------------ -----------  61.8% 336.00kB/544.10kB [8s] Writing at 0x000b2da8 ------------------- ----------  64.7% 352.00kB/544.10kB [9s] Writing at 0x000b7f47 -------------------- ---------  67.6% 368.00kB/544.10kB [9s] Writing at 0x000bcef2 --------------------- --------  70.6% 384.00kB/544.10kB [9s] Writing at 0x000c20f9 ---------------------- -------  73.5% 400.00kB/544.10kB [10s] Writing at 0x000c74ec ---------------------- -------  76.5% 416.00kB/544.10kB [10s] Writing at 0x000cc69d ----------------------- ------  79.4% 432.00kB/544.10kB [11s] Writing at 0x000d172a ------------------------ -----  82.3% 448.00kB/544.10kB [11s] Writing at 0x000d6dad ------------------------- ----  85.3% 464.00kB/544.10kB [11s] Writing at 0x000dc726 -------------------------- ---  88.2% 480.00kB/544.10kB [12s] Writing at 0x000e1fc8 --------------------------- --  91.2% 496.00kB/544.10kB [12s] Writing at 0x000e7d9c ---------------------------- -  94.1% 512.00kB/544.10kB [13s] Writing at 0x000ecf61 -----------------------------   97.0% 528.00kB/544.10kB [13s] Writing at 0x000f27a0 -----------------------------  100.0% 544.00kB/544.10kB [13s] Writing at 0x000f3000 ------------------------------ 100.0% 544.10kB/544.10kB [13s] 
-Wrote 749568 bytes (557157 compressed) at 0x0003c000 in 14.0 seconds (428.4 kbit/s).
-Verifying written data...
-Hash of data verified.
-
-Hard resetting via RTS pin...

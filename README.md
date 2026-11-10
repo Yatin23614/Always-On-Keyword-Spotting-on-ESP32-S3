@@ -2,6 +2,8 @@
 
 This project trains a small quantized CNN and runs it continuously on an ESP32 DevKit V1 with an analog microphone.
 
+The current firmware runs a two-class "Hello Jarvis" wake-phrase model. See [docs/testing-log.md](docs/testing-log.md) for how it was debugged, retrained on device recordings, and tested.
+
 The default model recognizes:
 
 `start`, `stop`, `next`, `previous`, `volume_up`, `volume_down`, `lights_on`, `lights_off`, and `unknown`.

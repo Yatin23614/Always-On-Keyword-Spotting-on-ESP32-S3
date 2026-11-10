@@ -1,9 +1,0 @@
-Command: ninja flash
-ERROR: A fatal error occurred: No more data to read from the serial port. This can have many causes, for troubleshooting steps visit: https://docs.espressif.com/projects/esptool/en/latest/troubleshooting.html
-CMake Error at C:/esp/v6.1/esp-idf/components/esptool_py/run_serial_tool.cmake:142 (message):
-  
-  C:/Espressif/tools/python/v6.1/venv/Scripts/python.exe;-m;esptool;--chip;esp32
-  failed.
-
-
-

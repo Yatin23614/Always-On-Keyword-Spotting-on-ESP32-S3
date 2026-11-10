@@ -10,9 +10,10 @@
 #define KWS_FEATURE_FRAMES 139
 #define KWS_CLASS_COUNT 2
 #define KWS_CONFIDENCE_THRESHOLD 0.65f
-#define KWS_COOLDOWN_MS 1500
+// Longer than the 2.8 s window so one utterance fires once.
+#define KWS_COOLDOWN_MS 3000
 // Minimum audio peak amplitude to trigger speech evaluation (Voice Activity Detection).
-// Room noise floor is ~2800–3600; conversational speaking voice reaches 15000–32000.
+// Room noise floor is ~2800â€“3600; conversational speaking voice reaches 15000â€“32000.
 #define KWS_SPEECH_MIN_PEAK 5000
 // Sliding window stride for inference (3000 samples = 300 ms @ 10 kHz).
 #define KWS_SLIDE_SAMPLES 3000
@@ -24,5 +25,9 @@
 
 // Wi-Fi network for the live command dashboard.
 // Change these before sharing the source or firmware publicly.
-#define KWS_WIFI_SSID "Jai Shri Krishna"
-#define KWS_WIFI_PASSWORD "jkys@0179"
+#if __has_include("wifi_credentials.h")
+#include "wifi_credentials.h"
+#else
+#define KWS_WIFI_SSID "your-ssid"
+#define KWS_WIFI_PASSWORD "your-password"
+#endif

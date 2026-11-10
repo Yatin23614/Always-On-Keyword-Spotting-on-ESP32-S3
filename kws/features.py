@@ -6,14 +6,15 @@ import numpy as np
 
 @dataclass(frozen=True)
 class FeatureConfig:
-    sample_rate: int = 16_000
-    window_samples: int = 16_000
-    frame_samples: int = 320
-    hop_samples: int = 160
+    # Must match firmware/main/config.h and scripts/train_jarvis.py.
+    sample_rate: int = 10_000
+    window_samples: int = 28_000
+    frame_samples: int = 300
+    hop_samples: int = 200
     mel_bins: int = 40
     fft_size: int = 512
-    fmin: float = 20.0
-    fmax: float = 7_600.0
+    fmin: float = 60.0
+    fmax: float = 4_800.0
 
     @property
     def frame_count(self) -> int:

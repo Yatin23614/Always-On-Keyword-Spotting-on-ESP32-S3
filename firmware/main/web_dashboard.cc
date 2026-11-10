@@ -1,4 +1,5 @@
 #include "web_dashboard.h"
+#include "audio_capture.h"
 #include "config.h"
 #include "esp_event.h"
 #include "esp_check.h"
@@ -9,19 +10,43 @@
 #include "esp_timer.h"
 #include "esp_task_wdt.h"
 #include "nvs_flash.h"
+#include "esp_heap_caps.h"
+#include "freertos/FreeRTOS.h"
+#include "freertos/semphr.h"
+#include <algorithm>
 #include <atomic>
 #include <cstdio>
+#include <cstdlib>
 #include <cstring>
 
 namespace {
 const char* TAG = "kws_web";
 std::atomic<uint8_t> last_id{255};
+std::atomic<uint32_t> detection_count{0};
 std::atomic<float> last_confidence{0.0f};
 std::atomic<int64_t> last_seen_ms{0};
 std::atomic<uint8_t> top_pred_id{255};
 std::atomic<float> top_pred_conf{0.0f};
 std::atomic<int16_t> live_audio_peak{0};
 const char* labels[] = {"hello_jarvis", "unknown"};
+
+// Ring of the most recent audio slides, served by /api/audio so real microphone
+// audio (and what the model said about it) can be recorded for debugging and
+// training. A full 2.8 s window does not fit in the heap next to Wi-Fi, so the
+// host stitches consecutive slides together by sequence number.
+constexpr int kRingSlides = 4;
+struct SlideHeader {
+    uint32_t seq;      // 1-based index of this slide since boot
+    float confidence;  // top-class confidence for the window ending with this slide
+    int16_t peak;      // peak amplitude of that window
+    uint8_t top;       // top class id, 255 when the silence gate skipped inference
+    uint8_t reserved;
+};
+static_assert(sizeof(SlideHeader) == 12, "host tools parse this layout");
+SemaphoreHandle_t ring_lock = nullptr;
+int16_t* ring = nullptr;
+SlideHeader ring_headers[kRingSlides] = {};
+uint32_t ring_seq = 0;
 
 void wifi_event_handler(void*, esp_event_base_t event_base, int32_t event_id, void*) {
     if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_START) {
@@ -116,9 +141,9 @@ async function poll() {
 
             if (s.confidence > 0 && s.id === 0) {
                 // Wake word triggered!
-                cmd.textContent = '⚡ JARVIS ACTIVATED';
+                cmd.textContent = '✅ Hello Jarvis detected';
                 cmd.style.color = '#4ade80';
-                conf.textContent = 'Development Mode ON (' + (s.confidence * 100).toFixed(1) + '%)';
+                conf.textContent = 'Confidence ' + (s.confidence * 100).toFixed(1) + '% · detections since boot: ' + s.count;
                 badge.textContent = 'WAKE WORD DETECTED';
                 badge.style.background = '#065f46';
                 badge.style.color = '#34d399';
@@ -174,7 +199,7 @@ esp_err_t status_handler(httpd_req_t* request) {
     const int64_t now_ms = esp_timer_get_time() / 1000;
     // Show recognized command for 3 seconds, then return to Listening...
     const bool is_recent = (seen_ms > 0) && (now_ms - seen_ms < 3000);
-    const char* label = (is_recent && id == 0) ? "HELLO JARVIS (DEV MODE ON)" : "Listening...";
+    const char* label = (is_recent && id == 0) ? "Hello Jarvis detected" : "Listening...";
     const float conf = (is_recent && id == 0) ? last_confidence.load() : 0.0f;
 
     const uint8_t top_id = top_pred_id.load();
@@ -182,25 +207,63 @@ esp_err_t status_handler(httpd_req_t* request) {
     const char* top_label = (top_id == 255 || top_conf <= 0.0f) ? "silence" : (top_id < 2 ? labels[top_id] : "unknown");
     const int16_t peak = live_audio_peak.load();
 
-    char response[300];
+    char response[400];
     std::snprintf(response, sizeof(response),
                   "{\"command\":\"%s\",\"confidence\":%.4f,\"id\":%u,"
-                  "\"top\":\"%s\",\"top_conf\":%.4f,\"peak\":%d,\"threshold\":%.2f,\"active\":%s}",
+                  "\"top\":\"%s\",\"top_conf\":%.4f,\"peak\":%d,\"threshold\":%.2f,\"active\":%s,"
+                  "\"uptime_ms\":%lld,\"audio_samples\":%lu,\"adc_overflows\":%lu,\"slides\":%lu,\"count\":%lu}",
                   label, conf, (is_recent && id == 0) ? 0 : 255, top_label, top_conf, peak, KWS_CONFIDENCE_THRESHOLD,
-                  (peak >= KWS_SPEECH_MIN_PEAK) ? "true" : "false");
+                  (peak >= KWS_SPEECH_MIN_PEAK) ? "true" : "false", static_cast<long long>(now_ms),
+                  static_cast<unsigned long>(kws_audio_samples()), static_cast<unsigned long>(kws_audio_overflows()),
+                  static_cast<unsigned long>(ring_seq),
+                  static_cast<unsigned long>(detection_count.load()));
     httpd_resp_set_type(request, "application/json");
     httpd_resp_set_hdr(request, "Cache-Control", "no-store");
     return httpd_resp_send(request, response, HTTPD_RESP_USE_STRLEN);
 }
-    httpd_resp_set_type(request, "application/json");
+
+// GET /api/audio?since=N returns every buffered slide with seq > N as
+// [SlideHeader][KWS_SLIDE_SAMPLES x int16] records, oldest first.
+esp_err_t audio_handler(httpd_req_t* request) {
+    if (!ring_lock || !ring) return httpd_resp_send_err(request, HTTPD_500_INTERNAL_SERVER_ERROR, "no audio ring");
+    uint32_t since = 0;
+    char query[32], value[16];
+    if (httpd_req_get_url_query_str(request, query, sizeof(query)) == ESP_OK &&
+        httpd_query_key_value(query, "since", value, sizeof(value)) == ESP_OK) {
+        since = static_cast<uint32_t>(std::strtoul(value, nullptr, 10));
+    }
+    httpd_resp_set_type(request, "application/octet-stream");
     httpd_resp_set_hdr(request, "Cache-Control", "no-store");
-    return httpd_resp_send(request, response, HTTPD_RESP_USE_STRLEN);
+    // Copy one slide at a time under the lock and send it after releasing the
+    // lock: a slow Wi-Fi send must never stall the audio worker.
+    static uint8_t send_buffer[sizeof(SlideHeader) + KWS_SLIDE_SAMPLES * sizeof(int16_t)];
+    esp_err_t result = ESP_OK;
+    for (uint32_t next = since + 1; result == ESP_OK;) {
+        bool have = false;
+        xSemaphoreTake(ring_lock, portMAX_DELAY);
+        const uint32_t newest = ring_seq;
+        const uint32_t oldest = newest >= kRingSlides ? newest - kRingSlides + 1 : 1;
+        for (uint32_t seq = std::max(oldest, next); seq <= newest && !have; ++seq) {
+            const int slot = seq % kRingSlides;
+            if (ring_headers[slot].seq != seq) continue;  // slide skipped while the lock was busy
+            std::memcpy(send_buffer, &ring_headers[slot], sizeof(SlideHeader));
+            std::memcpy(send_buffer + sizeof(SlideHeader), ring + slot * KWS_SLIDE_SAMPLES, KWS_SLIDE_SAMPLES * sizeof(int16_t));
+            next = seq + 1;
+            have = true;
+        }
+        xSemaphoreGive(ring_lock);
+        if (!have) break;
+        result = httpd_resp_send_chunk(request, reinterpret_cast<const char*>(send_buffer), sizeof(send_buffer));
+    }
+    if (result == ESP_OK) result = httpd_resp_send_chunk(request, nullptr, 0);
+    return result;
 }
 
 }
 
 void kws_web_record_command(uint8_t command_id, float confidence, int64_t now_ms) {
     last_id.store(command_id);
+    detection_count.fetch_add(1);
     last_confidence.store(confidence);
     last_seen_ms.store(now_ms);
 }
@@ -211,7 +274,16 @@ void kws_web_record_diag(uint8_t top_id, float top_confidence, int16_t audio_pea
     live_audio_peak.store(audio_peak);
 }
 
-void kws_web_update_audio(const int16_t*, size_t) {}
+void kws_web_update_audio(const int16_t* samples, size_t count) {
+    if (!ring_lock || !ring || count != KWS_SLIDE_SAMPLES) return;
+    // The HTTP handler only holds the lock for a 6 KB memcpy.
+    if (xSemaphoreTake(ring_lock, pdMS_TO_TICKS(20)) != pdTRUE) { ++ring_seq; return; }
+    const uint32_t seq = ++ring_seq;
+    const int slot = seq % kRingSlides;
+    std::memcpy(ring + slot * KWS_SLIDE_SAMPLES, samples, count * sizeof(int16_t));
+    ring_headers[slot] = {seq, top_pred_conf.load(), live_audio_peak.load(), top_pred_id.load(), 0};
+    xSemaphoreGive(ring_lock);
+}
 
 esp_err_t kws_web_start() {
     esp_err_t nvs_result = nvs_flash_init();
@@ -235,6 +307,10 @@ esp_err_t kws_web_start() {
     ESP_RETURN_ON_ERROR(esp_wifi_set_config(WIFI_IF_STA, &station), TAG, "wifi config");
     ESP_RETURN_ON_ERROR(esp_wifi_start(), TAG, "wifi start");
 
+    ring_lock = xSemaphoreCreateMutex();
+    ring = static_cast<int16_t*>(heap_caps_calloc(kRingSlides * KWS_SLIDE_SAMPLES, sizeof(int16_t), MALLOC_CAP_8BIT));
+    if (!ring) ESP_LOGW(TAG, "no memory for the /api/audio ring; audio capture disabled");
+
     httpd_handle_t server = nullptr;
     httpd_config_t server_config = HTTPD_DEFAULT_CONFIG();
     server_config.lru_purge_enable = true;
@@ -246,6 +322,8 @@ esp_err_t kws_web_start() {
     ESP_RETURN_ON_ERROR(httpd_register_uri_handler(server, &index), TAG, "index handler");
     ESP_RETURN_ON_ERROR(httpd_register_uri_handler(server, &favicon), TAG, "favicon handler");
     ESP_RETURN_ON_ERROR(httpd_register_uri_handler(server, &status), TAG, "status handler");
+    httpd_uri_t audio = {.uri = "/api/audio", .method = HTTP_GET, .handler = audio_handler, .user_ctx = nullptr};
+    ESP_RETURN_ON_ERROR(httpd_register_uri_handler(server, &audio), TAG, "audio handler");
     ESP_LOGI(TAG, "Connecting to Wi-Fi '%s'; the dashboard URL will be printed after DHCP", KWS_WIFI_SSID);
     return ESP_OK;
 }

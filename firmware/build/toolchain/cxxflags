@@ -1,7 +1,0 @@
--Wno-frame-address
--mlongcalls
--fno-builtin-memcpy
--fno-builtin-memset
--fno-builtin-bzero
-"-specs=C:/Users/yatin/OneDrive/Documents/always on device/firmware/build/specs/picolibc.specs"
--fno-rtti

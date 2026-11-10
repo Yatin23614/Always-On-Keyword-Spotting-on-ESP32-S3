@@ -1,5 +1,6 @@
 #include "keyword_inference.h"
 #include "config.h"
+#include "feature_extractor.h"
 #include "model_data.h"
 #include "web_dashboard.h"
 #include "esp_log.h"
@@ -15,7 +16,6 @@ uint8_t tensor_arena[kTensorArenaBytes];
 tflite::MicroInterpreter* interpreter = nullptr;
 TfLiteTensor* input = nullptr;
 TfLiteTensor* output = nullptr;
-uint8_t last_command = 255;
 int64_t last_emit_ms = -1000000000;
 }
 esp_err_t kws_inference_init() {
@@ -35,16 +35,26 @@ esp_err_t kws_inference_init() {
     interpreter = &static_interpreter;
     if (interpreter->AllocateTensors() != kTfLiteOk) return ESP_ERR_NO_MEM;
     input = interpreter->input(0); output = interpreter->output(0);
-    return input->type == kTfLiteInt8 && output->type == kTfLiteInt8 ? ESP_OK : ESP_ERR_INVALID_ARG;
+    if (input->type != kTfLiteInt8 || output->type != kTfLiteInt8) return ESP_ERR_INVALID_ARG;
+    // The embedded model must match the feature layout this firmware produces.
+    if (input->bytes != static_cast<size_t>(KWS_FEATURE_FRAMES * KWS_MEL_BINS) ||
+        output->bytes != static_cast<size_t>(KWS_CLASS_COUNT)) {
+        ESP_LOGE("kws_model", "model expects %u input / %u output bytes, firmware provides %d / %d",
+                 static_cast<unsigned>(input->bytes), static_cast<unsigned>(output->bytes),
+                 KWS_FEATURE_FRAMES * KWS_MEL_BINS, KWS_CLASS_COUNT);
+        return ESP_ERR_INVALID_SIZE;
+    }
+    ESP_LOGI("kws_model", "tensor arena: %u of %u bytes used",
+             static_cast<unsigned>(interpreter->arena_used_bytes()), static_cast<unsigned>(sizeof(tensor_arena)));
+    return ESP_OK;
 }
-esp_err_t kws_inference_run(const float* features, int16_t audio_peak, int64_t now_ms, kws_command_callback_t callback) {
+esp_err_t kws_inference_run(int32_t audio_peak, int64_t now_ms, kws_command_callback_t callback) {
     if (!interpreter || !input || !output) return ESP_ERR_INVALID_STATE;
 
     // Silence / Noise floor Gate (Voice Activity Detection):
     // Ambient room noise floor is ~800–3000; real speech produces > 10000.
     // Suppress false activations on silence.
     if (audio_peak < KWS_SPEECH_MIN_PEAK) {
-        last_command = 255;
         kws_web_record_diag(255, 0.0f, audio_peak, now_ms);
         static int64_t last_silence_log = 0;
         if (now_ms - last_silence_log >= 1000) {
@@ -54,11 +64,7 @@ esp_err_t kws_inference_run(const float* features, int16_t audio_peak, int64_t n
         return ESP_OK;
     }
 
-    const int feature_count = KWS_FEATURE_FRAMES * KWS_MEL_BINS;
-    for (int i = 0; i < feature_count; ++i) {
-        const int value = static_cast<int>(std::lround(features[i] / input->params.scale)) + input->params.zero_point;
-        input->data.int8[i] = static_cast<int8_t>(std::max(-128, std::min(127, value)));
-    }
+    kws_features_quantize(input->data.int8, input->params.scale, input->params.zero_point);
     if (interpreter->Invoke() != kTfLiteOk) return ESP_FAIL;
     int best = 0;
     for (int i = 1; i < KWS_CLASS_COUNT; ++i) if (output->data.int8[i] > output->data.int8[best]) best = i;
@@ -78,9 +84,11 @@ esp_err_t kws_inference_run(const float* features, int16_t audio_peak, int64_t n
         last_log_ms = now_ms;
     }
 
-    if (best != 0 || confidence < KWS_CONFIDENCE_THRESHOLD) { last_command = 255; return ESP_OK; }
-    if (best == last_command && now_ms - last_emit_ms < KWS_COOLDOWN_MS) return ESP_OK;
-    last_command = static_cast<uint8_t>(best); last_emit_ms = now_ms;
+    if (best != 0 || confidence < KWS_CONFIDENCE_THRESHOLD) return ESP_OK;
+    // One utterance stays inside the sliding window for several inferences, so
+    // the cooldown is longer than the window and is not reset by a single dip.
+    if (now_ms - last_emit_ms < KWS_COOLDOWN_MS) return ESP_OK;
+    last_emit_ms = now_ms;
     if (callback) callback(static_cast<uint8_t>(best), confidence);
     return ESP_OK;
 }
