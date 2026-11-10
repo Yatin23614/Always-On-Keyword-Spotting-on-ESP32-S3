@@ -1,0 +1,91 @@
+Command: ninja flash
+[1/5] C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\yatin\OneDrive\Documents\always on device\firmware\build" && C:\Espressif\tools\python\v6.1\venv\Scripts\python.exe C:/esp/v6.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app "C:/Users/yatin/OneDrive/Documents/always on device/firmware/build/partition_table/partition-table.bin" "C:/Users/yatin/OneDrive/Documents/always on device/firmware/build/keyword_spotter.bin""
+keyword_spotter.bin binary size 0xe7380 bytes. Smallest app partition is 0x100000 bytes. 0x18c80 bytes (10%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\yatin\OneDrive\Documents\always on device\firmware\build\bootloader" && C:\Espressif\tools\python\v6.1\venv\Scripts\python.exe C:/esp/v6.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 "C:/Users/yatin/OneDrive/Documents/always on device/firmware/build/bootloader/bootloader.bin""
+Bootloader binary size 0x6640 bytes. 0x9c0 bytes (9%) free.
+[3/5] No install step for 'bootloader'
+[4/5] Completed 'bootloader'
+[4/5] Running utility command for flash
+esptool --chip esp32 -p COM3 -b 460800 --before=default-reset --after=hard-reset write-flash --flash-mode dio --flash-freq 40m --flash-size 4MB 0x1000 bootloader/bootloader.bin 0x8000 partition_table/partition-table.bin 0x10000 keyword_spotter.bin --diff-with bootloader/bootloader_flashed.bin partition_table/partition-table_flashed.bin keyword_spotter_flashed.bin
+esptool v5.6.0
+Serial port COM3:
+Connecting....
+Connected to ESP32 on COM3:
+Chip type:          ESP32-D0WDQ6 (revision v1.1)
+Features:           Wi-Fi, BT, Dual Core + LP Core, 240MHz, Vref calibration in eFuse, Coding Scheme None
+Crystal frequency:  40MHz
+MAC:                fc:e8:c0:e1:b7:1c
+
+Uploading stub flasher...
+Running stub flasher...
+Stub flasher running.
+Changing baud rate to 460800...
+Changed.
+
+Configuring flash size...
+
+Writing 'bootloader/bootloader.bin' at 0x00001000...
+SHA digest in image updated.
+SHA digest in image updated.
+No changed sectors found, verifying if data is in flash...
+'bootloader/bootloader.bin' at 0x00001000 verified.
+
+Writing 'partition_table/partition-table.bin' at 0x00008000...
+No changed sectors found, verifying if data is in flash...
+'partition_table/partition-table.bin' at 0x00008000 verified.
+
+Writing 'keyword_spotter.bin' at 0x00010000...
+Changed data sectors found, fast reflashing...
+Reflashing 1 changed sector at 0x00010000...
+Flash will be erased from 0x00010000 to 0x00010fff...
+Compressed 4096 bytes to 1925...
+Writing at 0x00011000 ============================== 100.0% 1.88kB/1.88kB [0s] 
+Wrote 4096 bytes (1925 compressed) at 0x00010000 in 0.1 seconds (621.2 kbit/s).
+Reflashing 228 changed sectors at 0x00014000...
+Flash will be erased from 0x00014000 to 0x000f7fff...
+Compressed 933888 bytes to 637190...
+Writing at 0x00020d86 >                                2.6% 16.00kB/622.26kB [0s] 
+Writing at 0x00029251 =>                               5.1% 32.00kB/622.26kB [0s] 
+Writing at 0x00030328 ==                               7.7% 48.00kB/622.26kB [1s] 
+Writing at 0x0003b361 ===                             10.3% 64.00kB/622.26kB [1s] 
+Writing at 0x00041890 ===>                            12.9% 80.00kB/622.26kB [2s] 
+Writing at 0x00046ac1 ====>                           15.4% 96.00kB/622.26kB [2s] 
+Writing at 0x0004bf5e =====                           18.0% 112.00kB/622.26kB [3s] 
+Writing at 0x00051194 ======                          20.6% 128.00kB/622.26kB [3s] 
+Writing at 0x0005632d ======>                         23.1% 144.00kB/622.26kB [3s] 
+Writing at 0x0005b526 =======>                        25.7% 160.00kB/622.26kB [4s] 
+Writing at 0x0006061c ========                        28.3% 176.00kB/622.26kB [4s] 
+Writing at 0x0006596d =========                       30.9% 192.00kB/622.26kB [5s] 
+Writing at 0x0006b01e ==========                      33.4% 208.00kB/622.26kB [5s] 
+Writing at 0x0007082f ==========>                     36.0% 224.00kB/622.26kB [5s] 
+Writing at 0x00075e3b ===========>                    38.6% 240.00kB/622.26kB [6s] 
+Writing at 0x0007b6c8 ============                    41.1% 256.00kB/622.26kB [6s] 
+Writing at 0x0008109c =============                   43.7% 272.00kB/622.26kB [7s] 
+Writing at 0x00086599 =============>                  46.3% 288.00kB/622.26kB [7s] 
+Writing at 0x0008baa3 ==============>                 48.9% 304.00kB/622.26kB [7s] 
+Writing at 0x00091844 ===============                 51.4% 320.00kB/622.26kB [8s] 
+Writing at 0x00097315 ================                54.0% 336.00kB/622.26kB [8s] 
+Writing at 0x0009ca8a ================>               56.6% 352.00kB/622.26kB [9s] 
+Writing at 0x000a20c5 =================>              59.1% 368.00kB/622.26kB [9s] 
+Writing at 0x000a7a9a ==================>             61.7% 384.00kB/622.26kB [10s] 
+Writing at 0x000adac2 ===================             64.3% 400.00kB/622.26kB [10s] 
+Writing at 0x000b2ba0 ====================            66.9% 416.00kB/622.26kB [10s] 
+Writing at 0x000b7dd1 ====================>           69.4% 432.00kB/622.26kB [11s] 
+Writing at 0x000bcdca =====================>          72.0% 448.00kB/622.26kB [11s] 
+Writing at 0x000c1f69 ======================          74.6% 464.00kB/622.26kB [12s] 
+Writing at 0x000c73b3 =======================         77.1% 480.00kB/622.26kB [12s] 
+Writing at 0x000cc546 =======================>        79.7% 496.00kB/622.26kB [12s] 
+Writing at 0x000d1526 ========================>       82.3% 512.00kB/622.26kB [13s] 
+Writing at 0x000d6be0 =========================       84.9% 528.00kB/622.26kB [13s] 
+Writing at 0x000dc3d6 ==========================      87.4% 544.00kB/622.26kB [14s] 
+Writing at 0x000e1b1e ==========================>     90.0% 560.00kB/622.26kB [14s] 
+Writing at 0x000e791a ===========================>    92.6% 576.00kB/622.26kB [14s] 
+Writing at 0x000ed463 ============================>   95.1% 592.00kB/622.26kB [15s] 
+Writing at 0x000f24dc =============================   97.7% 608.00kB/622.26kB [15s] 
+Writing at 0x000f8000 ============================== 100.0% 622.26kB/622.26kB [16s] 
+Wrote 933888 bytes (637190 compressed) at 0x00014000 in 16.2 seconds (461.1 kbit/s).
+Verifying written data...
+Hash of data verified.
+
+Hard resetting via RTS pin...
