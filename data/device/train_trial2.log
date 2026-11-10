@@ -1,0 +1,178 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794316050.788085   38704 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794316054.355663   38704 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+session1: aligned 36 of 132 clips
+session1: 289 windows (63 wake)
+session2: aligned 5 of 27 clips
+session2: 121 windows (6 wake)
+channel |H| at 250/500/1k/2k/3k/4k Hz: [0.09700000286102295, 0.1379999965429306, 0.1469999998807907, 0.035999998450279236, 0.07699999958276749, 0.12099999934434891] | background noise clips: 115
+clean clips: 240 wake, 128 phrases, 2500 words, 335 commands
+train 3791 windows (wake 843), device validation 103 (wake 28)
+Model: "jarvis_spotter"
++--------------------------------------------------------------------------+
+| Layer (type)                    | Output Shape           |       Param # |
+|---------------------------------+------------------------+---------------|
+| input (InputLayer)              | (None, 139, 40, 1)     |             0 |
+|---------------------------------+------------------------+---------------|
+| conv2d (Conv2D)                 | (None, 70, 20, 16)     |           144 |
+|---------------------------------+------------------------+---------------|
+| batch_normalization             | (None, 70, 20, 16)     |            64 |
+| (BatchNormalization)            |                        |               |
+|---------------------------------+------------------------+---------------|
+| re_lu (ReLU)                    | (None, 70, 20, 16)     |             0 |
+|---------------------------------+------------------------+---------------|
+| depthwise_conv2d                | (None, 70, 20, 16)     |           144 |
+| (DepthwiseConv2D)               |                        |               |
+|---------------------------------+------------------------+---------------|
+| batch_normalization_1           | (None, 70, 20, 16)     |            64 |
+| (BatchNormalization)            |                        |               |
+|---------------------------------+------------------------+---------------|
+| re_lu_1 (ReLU)                  | (None, 70, 20, 16)     |             0 |
+|---------------------------------+------------------------+---------------|
+| conv2d_1 (Conv2D)               | (None, 70, 20, 32)     |           512 |
+|---------------------------------+------------------------+---------------|
+| batch_normalization_2           | (None, 70, 20, 32)     |           128 |
+| (BatchNormalization)            |                        |               |
+|---------------------------------+------------------------+---------------|
+| re_lu_2 (ReLU)                  | (None, 70, 20, 32)     |             0 |
+|---------------------------------+------------------------+---------------|
+| max_pooling2d (MaxPooling2D)    | (None, 35, 10, 32)     |             0 |
+|---------------------------------+------------------------+---------------|
+| depthwise_conv2d_1              | (None, 35, 10, 32)     |           288 |
+| (DepthwiseConv2D)               |                        |               |
+|---------------------------------+------------------------+---------------|
+| batch_normalization_3           | (None, 35, 10, 32)     |           128 |
+| (BatchNormalization)            |                        |               |
+|---------------------------------+------------------------+---------------|
+| re_lu_3 (ReLU)                  | (None, 35, 10, 32)     |             0 |
+|---------------------------------+------------------------+---------------|
+| conv2d_2 (Conv2D)               | (None, 35, 10, 48)     |         1,536 |
+|---------------------------------+------------------------+---------------|
+| batch_normalization_4           | (None, 35, 10, 48)     |           192 |
+| (BatchNormalization)            |                        |               |
+|---------------------------------+------------------------+---------------|
+| re_lu_4 (ReLU)                  | (None, 35, 10, 48)     |             0 |
+|---------------------------------+------------------------+---------------|
+| max_pooling2d_1 (MaxPooling2D)  | (None, 17, 5, 48)      |             0 |
+|---------------------------------+------------------------+---------------|
+| depthwise_conv2d_2              | (None, 17, 5, 48)      |           432 |
+| (DepthwiseConv2D)               |                        |               |
+|---------------------------------+------------------------+---------------|
+| batch_normalization_5           | (None, 17, 5, 48)      |           192 |
+| (BatchNormalization)            |                        |               |
+|---------------------------------+------------------------+---------------|
+| re_lu_5 (ReLU)                  | (None, 17, 5, 48)      |             0 |
+|---------------------------------+------------------------+---------------|
+| conv2d_3 (Conv2D)               | (None, 17, 5, 64)      |         3,072 |
+|---------------------------------+------------------------+---------------|
+| batch_normalization_6           | (None, 17, 5, 64)      |           256 |
+| (BatchNormalization)            |                        |               |
+|---------------------------------+------------------------+---------------|
+| re_lu_6 (ReLU)                  | (None, 17, 5, 64)      |             0 |
+|---------------------------------+------------------------+---------------|
+| global_average_pooling2d        | (None, 64)             |             0 |
+| (GlobalAveragePooling2D)        |                        |               |
+|---------------------------------+------------------------+---------------|
+| dropout (Dropout)               | (None, 64)             |             0 |
+|---------------------------------+------------------------+---------------|
+| output (Dense)                  | (None, 2)              |           130 |
++--------------------------------------------------------------------------+
+ Total params: 7,282 (28.45 KB)
+ Trainable params: 6,770 (26.45 KB)
+ Non-trainable params: 512 (2.00 KB)
+Epoch 1/60
+60/60 - 6s - 107ms/step - accuracy: 0.6840 - loss: 0.5108 - val_accuracy: 0.7282 - val_loss: 0.6742 - learning_rate: 0.0010
+Epoch 2/60
+60/60 - 3s - 50ms/step - accuracy: 0.8784 - loss: 0.2824 - val_accuracy: 0.7282 - val_loss: 0.6611 - learning_rate: 0.0010
+Epoch 3/60
+60/60 - 3s - 50ms/step - accuracy: 0.9224 - loss: 0.1818 - val_accuracy: 0.7087 - val_loss: 0.6576 - learning_rate: 0.0010
+Epoch 4/60
+60/60 - 4s - 59ms/step - accuracy: 0.9441 - loss: 0.1342 - val_accuracy: 0.8350 - val_loss: 0.6203 - learning_rate: 0.0010
+Epoch 5/60
+60/60 - 3s - 51ms/step - accuracy: 0.9594 - loss: 0.0994 - val_accuracy: 0.7767 - val_loss: 0.5788 - learning_rate: 0.0010
+Epoch 6/60
+60/60 - 3s - 55ms/step - accuracy: 0.9689 - loss: 0.0795 - val_accuracy: 0.7184 - val_loss: 0.5823 - learning_rate: 0.0010
+Epoch 7/60
+60/60 - 3s - 53ms/step - accuracy: 0.9776 - loss: 0.0655 - val_accuracy: 0.7864 - val_loss: 0.4786 - learning_rate: 0.0010
+Epoch 8/60
+60/60 - 3s - 52ms/step - accuracy: 0.9863 - loss: 0.0511 - val_accuracy: 0.8058 - val_loss: 0.5141 - learning_rate: 0.0010
+Epoch 9/60
+60/60 - 3s - 50ms/step - accuracy: 0.9858 - loss: 0.0426 - val_accuracy: 0.8058 - val_loss: 0.5895 - learning_rate: 0.0010
+Epoch 10/60
+60/60 - 3s - 53ms/step - accuracy: 0.9902 - loss: 0.0357 - val_accuracy: 0.8058 - val_loss: 0.6679 - learning_rate: 0.0010
+Epoch 11/60
+60/60 - 3s - 50ms/step - accuracy: 0.9934 - loss: 0.0277 - val_accuracy: 0.8350 - val_loss: 0.8281 - learning_rate: 5.0000e-04
+Epoch 12/60
+60/60 - 3s - 54ms/step - accuracy: 0.9924 - loss: 0.0259 - val_accuracy: 0.7961 - val_loss: 1.0609 - learning_rate: 5.0000e-04
+Epoch 13/60
+60/60 - 3s - 51ms/step - accuracy: 0.9960 - loss: 0.0216 - val_accuracy: 0.8058 - val_loss: 0.9905 - learning_rate: 5.0000e-04
+Epoch 14/60
+60/60 - 3s - 50ms/step - accuracy: 0.9955 - loss: 0.0180 - val_accuracy: 0.8058 - val_loss: 1.0038 - learning_rate: 2.5000e-04
+Epoch 15/60
+60/60 - 3s - 57ms/step - accuracy: 0.9960 - loss: 0.0174 - val_accuracy: 0.8058 - val_loss: 1.0043 - learning_rate: 2.5000e-04
+Epoch 16/60
+60/60 - 3s - 53ms/step - accuracy: 0.9979 - loss: 0.0167 - val_accuracy: 0.8058 - val_loss: 1.0444 - learning_rate: 2.5000e-04
+Epoch 17/60
+60/60 - 3s - 49ms/step - accuracy: 0.9974 - loss: 0.0151 - val_accuracy: 0.8155 - val_loss: 0.9984 - learning_rate: 1.2500e-04
+Saved artifact at 'C:\Users\yatin\AppData\Local\Temp\tmptl728qj_'. The following endpoints are available:
+
+* Endpoint 'serve'
+  args_0 (POSITIONAL_ONLY): TensorSpec(shape=(None, 139, 40, 1), dtype=tf.float32, name='input')
+Output Type:
+  TensorSpec(shape=(None, 2), dtype=tf.float32, name=None)
+Captures:
+  2299252897936: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2299254080720: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2299254081104: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2299252899280: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2299252899088: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2299252899472: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2299254079568: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2299254082064: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2299254081488: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2299254079760: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2299252899664: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2299254083408: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2299254083792: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2299254080144: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2299254082448: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2299254084560: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2299254085712: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2299254086480: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2299254084368: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2299254084944: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2299254084752: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2299254087440: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2299254087824: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2299254087056: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2299254087248: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2299254085328: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2299254086096: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2299254088784: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2299254085904: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2299254088208: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2299254087632: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2299254088400: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2299254089744: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2299254085136: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2299254089168: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2299254088976: TensorSpec(shape=(), dtype=tf.resource, name=None)
+  2299254086288: TensorSpec(shape=(), dtype=tf.resource, name=None)
+C:\Users\yatin\OneDrive\Documents\always on device\.venv\Lib\site-packages\tensorflow\lite\python\convert.py:846: UserWarning: Statistics for quantized inputs were expected, but not specified; continuing anyway.
+  warnings.warn(
+fully_quantize: 0, inference_type: 6, input_inference_type: INT8, output_inference_type: INT8
+C:\Users\yatin\OneDrive\Documents\always on device\.venv\Lib\site-packages\tensorflow\lite\python\interpreter.py:457: UserWarning:     Warning: tf.lite.Interpreter is deprecated and is scheduled for deletion in
+    TF 2.20. Please use the LiteRT interpreter from the ai_edge_litert package.
+    See the [migration guide](https://ai.google.dev/edge/litert/migration)
+    for details.
+    
+  warnings.warn(_INTERPRETER_DELETION_WARNING)
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+INT8 device validation @ 0.50: wake phrases detected  60.0% of 5, wake windows  57.1%, false-positive windows 37.04% of 27
+INT8 device validation @ 0.65: wake phrases detected  60.0% of 5, wake windows  53.6%, false-positive windows 14.81% of 27
+INT8 device validation @ 0.80: wake phrases detected  60.0% of 5, wake windows  39.3%, false-positive windows  7.41% of 27
+INT8 device validation @ 0.90: wake phrases detected  40.0% of 5, wake windows  28.6%, false-positive windows  0.00% of 27
+INT8 model: 22472 bytes
+wrote firmware/main/model_data.cc

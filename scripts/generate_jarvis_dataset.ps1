@@ -48,3 +48,4 @@ try {
 finally {
     $synth.Dispose()
 }
+

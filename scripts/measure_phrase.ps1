@@ -15,3 +15,4 @@ $synth.Dispose()
 $len = (Get-Item "test_phrase.wav").Length
 $dur = ($len - 44) / 32000.0
 Write-Host "Duration: $dur s, Length: $len bytes"
+

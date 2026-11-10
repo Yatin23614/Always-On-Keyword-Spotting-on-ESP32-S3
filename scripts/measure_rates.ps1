@@ -13,3 +13,4 @@ foreach ($r in @(-2, 0, 1, 2, 3, 4)) {
     Remove-Item $file
 }
 $synth.Dispose()
+
